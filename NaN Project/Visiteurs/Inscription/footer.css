@@ -1,0 +1,14 @@
+footer{
+    margin: 0px;
+    padding: 1.5% 0px 10px 0px;
+    height: 30px;
+    width: 100%;
+    background-image: url('../../Images/font.png');
+}
+
+footer p{
+    margin: 5px 0px 0px 0px;
+    padding: 0px;
+    text-align: center;
+    color: rgba(153,117,253,1);
+}

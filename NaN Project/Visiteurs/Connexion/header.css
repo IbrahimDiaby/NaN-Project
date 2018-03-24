@@ -1,0 +1,68 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    height: auto;
+    width: 100%;
+}
+
+header{
+    margin: 0px;
+    padding: 0px;
+    height: 40px;
+    width: 100%;
+    display: flex;
+    background-image: url("../../Images/font.png");
+}
+
+#logo{
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+    width: 17%;
+}
+
+#logo h1{
+    margin: 5px 0px 0px 10px;
+    padding: 0px;
+    color: rgba(153,117,253,1);
+    font-size: 23px;
+}
+
+nav{
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+    width: 83%;
+}
+
+nav ul{
+    margin: 0px;
+    padding: 0px;
+}
+
+nav ul li{
+    list-style-type: none;
+    float: right;
+    padding: 0px 15px 0px 0px;
+    margin: 10px 0px 0px 0px;
+    color: #fff;
+}
+
+nav a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.admin{
+    margin: 0px;
+    padding: 0px;
+    height: 22px;
+    width: 22px;
+    vertical-align: center;
+}
+
+.table-logo{
+    margin: 5px 10px 0px 0px;
+    height: 19px;
+    width: 19px;
+}

@@ -53,6 +53,8 @@ select{
     padding: 0px;
     font-size: 18px;
     font-weight: bold;
+    background-color: rgba(255,255,255,0.1);
+    border: 1px solid rgba(000,000,000,0.1);
 }
 
 input[type="datetime-local"]{

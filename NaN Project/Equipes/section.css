@@ -2,11 +2,12 @@ section{
     height: auto;
     width: 100%;
     margin: 0px;
-    padding: 0px;
+    padding: 10px 0px 0px 0px;
+    background-color: rgba(000,000,000,0.8);
 }
 
 .contain{
-    margin: 10px auto;
+    margin: 0px auto;
     padding: 0px;
     width: 80%;
     height: 100%;
@@ -22,6 +23,7 @@ input[type="text"]{
     vertical-align: middle;
     border-radius: 5px;
     border: 1px solid rgba(000,000,000,0.5);  
+    background-color: rgba(255,255,255,0.1);
 }
 
 input[type="submit"]{
@@ -81,4 +83,10 @@ input[type="datetime-local"]{
     padding: 0px;
     width: inherit;
     height: inherit;
+}
+
+label{
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
 }

@@ -91,7 +91,7 @@ nav ul li{
     float: left;
 }
 
-.facebook, .discord, .blog, .github, .twitter, .linkedin, .youtube,{
+.facebook, .discord, .blog, .github, .twitter, .linkedin, .youtube, .gmail{
     width: 60px;
     height: 60px;
 }

@@ -37,10 +37,18 @@ section{
     width: 19px;
 }
 
-.module-logo{
+.firstmodule-logo{
     margin: 5px 10px 0px 0px;
     height: 19px;
     width: 19px;
+}
+
+.send-logo, .project-logo, .comment-logo, .quiz-logo, .module-logo, .map-logo{
+    margin: 0px 0px 5px 10px;
+    padding: 0px;
+    height: 35px;
+    width: 35px;
+    vertical-align: middle;
 }
 
 .view-logo{

@@ -24,6 +24,7 @@ input[type="text"]{
     border-radius: 5px;
     border: 1px solid rgba(000,000,000,0.5);  
     background-color: rgba(255,255,255,0.1);
+    border: 1px solid rgba(153,117,253,1);
 }
 
 input[type="submit"]{
@@ -38,6 +39,7 @@ input[type="submit"]{
     background-color: #000000;
     color: rgba(153,117,253,1);
     border-radius: 5px;
+    border: 1px solid rgba(153,117,253,1);
 }
 
 input[type="submit"]:hover{
@@ -52,6 +54,7 @@ select{
     padding: 0px;
     font-size: 18px;
     font-weight: bold;
+    border: 1px solid rgba(153,117,253,1);
 }
 
 input[type="datetime-local"]{
@@ -61,6 +64,7 @@ input[type="datetime-local"]{
     padding: 0px;
     font-size: 18px;
     font-weight: bold;
+    border: 1px solid rgba(153,117,253,1);
 }
 
 

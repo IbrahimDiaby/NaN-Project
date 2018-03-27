@@ -1,3 +1,11 @@
+<?php 
+
+    $bdd = new PDO('mysql:host=localhost;dbname=NaN;', 'root', 'root');
+    $requete = $bdd->prepare('INSERT INTO ');
+    // setcookie("username", $_POST['username'], time() + 3600*24*30);
+    // $_COOKIE['username'] = $_POST['username'];
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -18,7 +26,7 @@
             <ul>
                 <a href="#"><li>Se Déconnecter <img src="#" alt="" class="" /></li></a>
                 <a href="#"><li><img src="../Images/admin.png" alt="" class="admin" /></li></a>
-                <a href="#"><li><strong>#Nom de l'admin</strong> (Administrateur)</li></a>
+                <a href="#"><li><strong>#<?php echo $_COOKIE['username'] ?></strong> (Administrateur)</li></a>
                 <a href="#"><li>Vous etes connecté en tant que <img src="#" alt="" class="" /></li></a>
             </ul>
         </nav>
@@ -32,7 +40,8 @@
         </div>
         <br />
         <div class="contain">
-            <form action="" method="POST">
+            <form action="<?php $_SERVER['PHP_SELF'] ?>" method="POST">
+            
                 <label for="group">
                         Nom du groupe: <br /><input type="text" name="group" id="group"><br />
                 </label>

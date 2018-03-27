@@ -1,3 +1,8 @@
+<?php 
+    setcookie("username", $_POST['username'], time() + 3600*24*30);
+    // $_COOKIE['username'] = $_POST['username'];
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -12,14 +17,14 @@
 </head>
 <body>
     <main>
-        <form action="#" method="POST">
+        <form action="../NaN/index.php" method="POST">
             <label for="username">
-                <input type="text" name="username" id="username" placeholder="Admin"/>
+                <input type="text" name="username" id="username" placeholder="Admin" required //>
                 <br />
             </label>
                                             
             <label for="password">
-                <input type="password" name="password" id="password" placeholder="Mot De Passe">
+                <input type="password" name="password" id="password" placeholder="Mot De Passe" required />
                     <br />
                 </label>
                                     

@@ -1,3 +1,17 @@
+<?php
+
+    // $bdd = new PDO("mysql:host=localhost;dbname=NaN", "root", 'root');
+    // $reponse = $bdd->query('SELECT * FROM Sudo');
+    // while($donnees = $reponse->fetch()){
+    //     echo '<p>' . $donnees['ID'] . ' ' . $donnees['Nom'] . '</p>';
+    // }
+    
+    // $username = $_POST['username'];
+    setcookie("username", $username, time() + 3600*24*30);
+
+    $_COOKIE['username'] = $_POST['username'];
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,7 +19,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>NaN Gestion</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Serif" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Serif" rel="stylesheet"> -->
     <link rel="stylesheet" type="text/css" media="screen" href="header.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="section.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="footer.css" />
@@ -31,7 +45,7 @@
                     Vous etes connecté en tant que : 
                 </li>
                 
-                <li><a href="#">#Admin <img src="../Images/form.png" alt="" class="imgSudo_Su" title="Administrateur" /></a>
+                <li><a href="#">#<?php echo $_COOKIE['username'] ?><img src="../Images/form.png" alt="" class="imgSudo_Su" title="Administrateur" /></a>
                     <ul>
                         <li><a href="#">Créez</a></li>
                         <li><a href="#">Ajoutez</a></li>
@@ -40,7 +54,7 @@
                     </ul>
                 </li>
 
-                <li><a href="#">Etudiants <img src="../Images/students.png" alt="" class="students" title="Etudiants" /></a>
+                <li><a href="../Etudiants/index.php">Etudiants <img src="../Images/students.png" alt="" class="students" title="Etudiants" /></a>
                     <ul>
                         <li><a href="#">Créez</a></li>
                         <li><a href="#">Ajoutez</a></li>
@@ -49,7 +63,7 @@
                     </ul>
                 </li>
 
-                <li><a href="#">Equipes <img src="../Images/users.png" alt="" class="users" title="Equipes" /></a>
+                <li><a href="../Equipes/index.php">Equipes <img src="../Images/users.png" alt="" class="users" title="Equipes" /></a>
                     <ul>
                         <li><a href="#">Créez <img src="../Images/info.png" alt="" class="info" title="Equipe Z Info" /></a></li>
                         <li><a href="#">Ajoutez un étudiant <img src="../Images/info.png" alt="" class="info" title="Equipe A Info" /></a></li>
@@ -65,7 +79,7 @@
                     </ul>
                 </li>
 
-                <li><a href="#">Groupes <img src="../Images/group.png" alt="" class="group" title="Equipes" /></a>
+                <li><a href="../Groupes/index.php">Groupes <img src="../Images/group.png" alt="" class="group" title="Equipes" /></a>
                     <ul>
                         <li><a href="#">Créez</a></li>
                         <li><a href="#">Ajoutez un étudiant</a></li>
@@ -74,7 +88,7 @@
                     </ul>
                 </li>
 
-                <li><a href="#">Paramètres <img src="../Images/parameter.png" alt="" class="parameters" title="Paramètres" /></a>
+                <li><a href="../Matieres/index.php">Paramètres <img src="../Images/parameter.png" alt="" class="parameters" title="Paramètres" /></a>
                     <ul>
                         <li><a href="#">Quizz</a></li>
                         <li><a href="#">Projets</a></li>

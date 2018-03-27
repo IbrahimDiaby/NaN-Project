@@ -5,6 +5,10 @@ body{
     width: 100%;
 }
 
+body a{
+    text-decoration: none;
+}
+
 header{
     margin: 0px;
     padding: 0px;
@@ -12,6 +16,10 @@ header{
     width: 100%;
     display: flex;
     background-image: url("../Images/font.png");
+}
+
+header h1 a:visited{
+    color: rgba(153,117,253,1);
 }
 
 #logo{
@@ -27,6 +35,7 @@ header{
     color: rgba(153,117,253,1);
     font-size: 23px;
 }
+
 
 nav{
     margin: 0px;
@@ -45,6 +54,7 @@ nav ul li{
     float: right;
     padding: 0px 15px 0px 0px;
     margin: 10px 0px 0px 0px;
+    color: #fff;
 }
 
 nav a{

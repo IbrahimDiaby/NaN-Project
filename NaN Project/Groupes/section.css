@@ -15,16 +15,18 @@ section{
 }
 
 input[type="text"]{
-    width: 95%;
+    width: 50%;
     height: 40px;
     margin: 10px 0px 10px 0px;
     padding: 0px 0px 0px 10px;
-    font-size: 18px;
+    font-size: 25px;
     vertical-align: middle;
-    border-radius: 5px;
-    border: 1px solid rgba(153,117,253,1);
     text-align: center;
+    border-radius: 5px;
     background-color: rgba(255,255,255,0.1);
+    border: 1px solid rgba(153,117,253,1);
+    color: rgba(153,117,253,1);
+    font-weight: bold;
 }
 
 input[type="submit"]{
@@ -46,6 +48,28 @@ input[type="submit"]:hover{
     background-color: rgba(153,117,253,1);
     color: #000000;
 }
+
+select{
+    width: 20%;
+    height: 40px;
+    margin: 10px 0px 10px 0px;
+    padding: 0px;
+    font-size: 18px;
+    font-weight: bold;
+    border: 1px solid rgba(153,117,253,1);
+    background-color: rgba(255,255,255,0.1);
+}
+
+input[type="datetime-local"]{
+    width: 21%;
+    height: 40px;
+    margin: 10px 0px 10px 0px;
+    padding: 0px;
+    font-size: 18px;
+    font-weight: bold;
+    border: 1px solid rgba(153,117,253,1);
+}
+
 
 .title{
     margin: 0px;
@@ -72,4 +96,21 @@ label{
     font-size: 20px;
     font-weight: bold;
     text-transform: uppercase;
+}
+
+.subject_title{
+    margin: 30px 0px 25px 10px;
+    padding: 0px;
+    height: 45px;
+    font-size: 30px;
+    border: 2px dashed rgba(153,117,253,1);
+    color: rgba(153,117,253,1);
+}
+
+.creategroup{
+    width: 40px;
+    height: 40px;
+    margin: 0px 0px 10px 10px;
+    padding: 0px;
+    vertical-align: middle;
 }

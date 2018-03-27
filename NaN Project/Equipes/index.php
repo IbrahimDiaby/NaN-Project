@@ -1,3 +1,19 @@
+<?php 
+    $bdd = new PDO("mysql:host=localhost;dbname=NaN", 'root', 'root');
+    // $reponse = $bdd->query('SELECT * FROM Visiteurs');
+
+    if(isset($_POST['group'])){
+        $requete = $bdd->prepare('INSERT INTO Groupes(Nom, Equipe)
+        VALUES(?, ?)');
+        $requete->execute(array(htmlspecialchars($_POST['group']), htmlspecialchars($_POST['equipe'])));
+    }
+    
+
+    // setcookie("username", $_POST['username'], time() + 3600*24*30);
+    // $_COOKIE['username'] = $_POST['username'];
+
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -7,7 +23,7 @@
     <link rel="stylesheet" href="header.css" type="text/css" />
     <link rel="stylesheet" href="section.css" type="text/css" />
     <link rel="stylesheet" href="footer.css" type="text/css" />
-    <title>Equipes</title>
+    <title>Groupes & Equipes</title>
 </head>
 <body>
     <header>
@@ -18,7 +34,7 @@
             <ul>
                 <a href="#"><li>Se Déconnecter <img src="#" alt="" class="" /></li></a>
                 <a href="#"><li><img src="../Images/admin.png" alt="" class="admin" /></li></a>
-                <a href="#"><li><strong>#Nom de l'admin</strong> (Administrateur)</li></a>
+                <a href="#"><li><strong>#<?php echo $_COOKIE['username'] ?></strong> (Administrateur)</li></a>
                 <a href="#"><li>Vous etes connecté en tant que <img src="#" alt="" class="" /></li></a>
             </ul>
         </nav>
@@ -31,11 +47,21 @@
             </div>
         </div><br />
         <div class="contain">
-            <form action="" method="POST">
+            <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST">
+
+            <label for="title">
+                    <h1 class="subject_title">Création de nouveau groupe<img src="../Images/creategroup.png" alt="" class="creategroup"></h1>
+            </label>
                 <label for="group">
-                        Nom du groupe: <br /><input type="text" name="group" id="group"><br />
+                        Nom du groupe : <br /><input type="text" name="group" id="group" required /><br />
                 </label>
 
+                <label for="equipe">
+                        Equipes: <br /><select name="equipe" id="equipe">
+                            <option>Equipe Z</option>
+                            <option>Equipe A</option>
+                        </select><br />
+                </label>
                 <label for="submit">
                     <input type="submit" value="Confirmer">
                 </label>

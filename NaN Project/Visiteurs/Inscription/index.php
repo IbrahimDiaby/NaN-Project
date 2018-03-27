@@ -1,3 +1,15 @@
+<?php 
+    $bdd = new PDO("mysql:host=localhost;dbname=NaN", 'root', 'root');
+    // $reponse = $bdd->query('SELECT * FROM Visiteurs');
+    $requete = $bdd->prepare('INSERT INTO Visiteurs(Nom, Prenoms, Mail, Password, Activite, Localisation)
+    VALUES(?, ?, ?, ?, ?, ?)');
+    $requete->execute(array(htmlspecialchars($_POST['name']), htmlspecialchars($_POST['surname']),htmlspecialchars($_POST['mail']),htmlspecialchars($_POST['password']),htmlspecialchars($_POST['activity']),htmlspecialchars($_POST['locate'])));
+
+    setcookie("username", $_POST['username'], time() + 3600*24*30);
+    // $_COOKIE['username'] = $_POST['username'];
+
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -29,25 +41,25 @@
             </div><br />
             
             <div class="contain">
-                <form action="" method="POST">
+                <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST">
                     <label for="name">
-                        Nom: <br /><input type="text" name="" id="name" /><br />
+                        Nom: <br /><input type="text" name="name" id="name" required/><br />
                         </label>
                         
                         <label for="surname">
-                            Prénom: <br /><input type="text" name="surname" id="surname" /><br />
+                            Prénom: <br /><input type="text" name="surname" id="surname" required/><br />
                         </label>
                         
-                        <label for="old">
-                            Mail: <br /><input type="text" name="mail" id="mail" /><br />
+                        <label for="mail">
+                            Mail: <br /><input type="text" name="mail" id="mail" required/><br />
                         </label>
                         
                         <label for="password">
-                            Mot De Passe: <br /><input type="text" name="password" id="password" /><br />
+                            Mot De Passe: <br /><input type="password" name="password" id="password" required/><br />
                         </label>
 
                         <label for="locate">
-                            Localisation: <br /><input type="text" name="locate" id="locate" /><br />
+                            Localisation: <br /><input type="text" name="locate" id="locate" required/><br />
                         </label>
                         
                         <label for="activity">

@@ -1,3 +1,29 @@
+<?php 
+
+$bdd = new PDO("mysql:host=localhost;dbname=NaN", 'root', 'root');
+// $reponse = $bdd->query('SELECT * FROM Visiteurs');
+$requete = $bdd->prepare('INSERT INTO Etudiants(Nom, Prenom, Age, Mail, Localisation, Activite, Groupe, Equipe)
+VALUES(?, ?, ?, ?, ?, ?, ?, ?)');
+$requete->execute(array(htmlspecialchars($_POST['name']), htmlspecialchars($_POST['surname']), htmlspecialchars($_POST['old']), htmlspecialchars($_POST['mail']), htmlspecialchars($_POST['locate']), htmlspecialchars($_POST['activity']), htmlspecialchars($_POST['group']), htmlspecialchars($_POST['equipe'])));
+    // setcookie("username", $_POST['username'], time() + 3600*24*30);
+    // $_COOKIE['username'] = $_POST['username'];
+?>
+
+<?php
+$equipe= htmlspecialchars($_POST['equipe']);
+if(isset ($equipe) && $equipe === "EquipeZ"){
+    $requete1 = $bdd->prepare('INSERT INTO EquipeZ(Membres, Mail)
+    VALUES(?, ?)');
+    $requete1->execute(array(htmlspecialchars($_POST['name'] . " " . $_POST['surname']), htmlspecialchars($_POST['mail'])));
+}
+
+else if(isset ($equipe) && $equipe === "EquipeA"){
+    $requete2 = $bdd->prepare('INSERT INTO EquipeA(Membres, Mail)
+    VALUES(?, ?)');
+    $requete2->execute(array(htmlspecialchars($_POST['name'] . " " . $_POST['surname']), htmlspecialchars($_POST['mail'])));
+}
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -18,7 +44,7 @@
             <ul>
                 <a href="#"><li>Se Déconnecter <img src="#" alt="" class="" /></li></a>
                 <a href="#"><li><img src="../Images/admin.png" alt="" class="admin" /></li></a>
-                <a href="#"><li><strong>#Nom de l'admin</strong> (Administrateur)</li></a>
+                <a href="#"><li><strong>#<?php echo $_COOKIE['username'] ?></strong> (Administrateur)</li></a>
                 <a href="#"><li>Vous etes connecté en tant que <img src="#" alt="" class="" /></li></a>
             </ul>
         </nav>
@@ -31,13 +57,13 @@
             </div>
         </div>
         <div class="contain">
-            <form action="" method="POST">
+            <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST">
                 <label for="name">
-                    Nom: <br /><input type="text" name="" id="name" /><br />
+                    Nom: <br /><input type="text" name="name" id="name" required /><br />
                 </label>
 
                 <label for="surname">
-                    Prénom: <br /><input type="text" name="surname" id="surname" /><br />
+                    Prénom: <br /><input type="text" name="surname" id="surname" required /><br />
                 </label>
 
                 <label for="old">
@@ -53,8 +79,12 @@
                     </select><br />
                 </label>
 
+                <label for="mail">
+                    Addresse Mail: <br /><input type="text" name="mail" id="mail" required /><br />
+                </label>
+
                 <label for="locate">
-                    Localisation: <br /><input type="text" name="locate" id="locate" /><br />
+                    Localisation: <br /><input type="text" name="locate" id="locate" required /><br />
                 </label>
 
                 <label for="activity">
@@ -62,6 +92,13 @@
                             <option value="Etudiants">Etudiants</option>
                             <option value="Travailleurs">Travailleurs</option>
                             <option value="other">Autres</option>
+                            </select><br />
+                </label>
+
+                <label for="equipe">
+                    Equipes: <br /><select name="equipe" id="equipe">
+                            <option value="EquipeZ">Equipe Z</option>
+                            <option value="EquipeA">Equipe A</option>
                             </select><br />
                 </label>
 
@@ -79,10 +116,6 @@
                     <option>Groupe J</option>
                     <option>Groupe K</option>
                 </select><br />
-                </label>
-
-                <label for="date">
-                    Adhésion Le : <br /><input type="datetime-local" name="datetime" id="datetime"><br />
                 </label>
 
                 <label for="submit">

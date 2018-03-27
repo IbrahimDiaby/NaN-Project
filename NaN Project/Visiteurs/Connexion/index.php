@@ -22,7 +22,7 @@
         </div>
         <nav>
             <ul>
-                <a href="#"><li><strong>Inscription</strong></li></a>
+                <a href="../Inscription/index.php"><li><strong>Inscription</strong></li></a>
                 <li>Vous n'etes pas inscrit en tant que visiteurs ? <img src="#" alt="" class="" /></li>
             </ul>
         </nav>
@@ -30,9 +30,9 @@
     <section>
             <main>
                     <div class="divlogo">
-                        <img src="../../Images/NaN.png" alt="" class="logo">
+                        <img src="../../Images/NaN.png" alt="NaN Logo" class="logo">
                     </div>
-                    <form action="#" method="POST">
+                    <form action="../../NaN/index.php" method="POST">
                         <label for="username">
                             <input type="text" name="username" id="username" placeholder="Nom d'utilisateur"/>
                             <br />

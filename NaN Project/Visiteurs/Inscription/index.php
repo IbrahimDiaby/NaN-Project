@@ -29,7 +29,7 @@
         </div>
         <nav>
             <ul>
-                <a href="#"><li><strong>Connexion</strong></li></a>
+                <a href="../Connexion/index.php"><li><strong>Connexion</strong></li></a>
                 <li>Vous etes deja inscrit en tant que visiteurs ? <img src="#" alt="" class="" /></li>
             </ul>
         </nav>

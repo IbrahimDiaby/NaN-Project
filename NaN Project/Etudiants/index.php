@@ -12,15 +12,15 @@ $requete->execute(array(htmlspecialchars($_POST['name']), htmlspecialchars($_POS
 <?php
 $equipe= htmlspecialchars($_POST['equipe']);
 if(isset ($equipe) && $equipe === "EquipeZ"){
-    $requete1 = $bdd->prepare('INSERT INTO EquipeZ(Membres, Mail)
-    VALUES(?, ?)');
-    $requete1->execute(array(htmlspecialchars($_POST['name'] . " " . $_POST['surname']), htmlspecialchars($_POST['mail'])));
+    $requete1 = $bdd->prepare('INSERT INTO EquipeZ(Membres, Mail, Age, Localisation, Groupe, Activite)
+    VALUES(?, ?, ?, ?, ?, ?)');
+    $requete1->execute(array(htmlspecialchars($_POST['name'] . " " . $_POST['surname']), htmlspecialchars($_POST['mail']), htmlspecialchars($_POST['old']), htmlspecialchars($_POST['locate']), htmlspecialchars($_POST['group']), htmlspecialchars($_POST['activity'])));
 }
 
 else if(isset ($equipe) && $equipe === "EquipeA"){
-    $requete2 = $bdd->prepare('INSERT INTO EquipeA(Membres, Mail)
-    VALUES(?, ?)');
-    $requete2->execute(array(htmlspecialchars($_POST['name'] . " " . $_POST['surname']), htmlspecialchars($_POST['mail'])));
+    $requete2 = $bdd->prepare('INSERT INTO EquipeA(Membres, Mail, Age, Localisation, Groupe, Activite)
+    VALUES(?, ?, ?, ?, ?, ?)');
+    $requete2->execute(array(htmlspecialchars($_POST['name'] . " " . $_POST['surname']), htmlspecialchars($_POST['mail']), htmlspecialchars($_POST['old']), htmlspecialchars($_POST['locate']), htmlspecialchars($_POST['group']), htmlspecialchars($_POST['activity'])));
 }
 ?>
 

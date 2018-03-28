@@ -1,0 +1,58 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    height: auto;
+    width: 100%;
+}
+
+section{
+    margin: 0px;
+    padding: 0px;
+    height: auto;
+    width: 100%;
+}
+
+.container{
+    margin: 0px auto;
+    padding: 0px;
+    height: auto;
+    width: 90%;
+}
+
+table{
+    border: 1px solid #000000;
+}
+
+table td, table th, table tr{
+    border: 1px solid #000000;
+    width: 156px;
+}
+
+table td p, table th p, table tr p{
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+}
+
+.column{
+    background-color: rgba(153,117,253,0.4);
+}
+
+.title1{
+    margin: 20px 0px 0px 0px;
+    padding: 0px;
+    height: auto;
+    width: 100%;
+}
+
+.title1 p{
+    font-size: 25px;
+    font-weight: bold;
+    font-style: italic;
+    text-align: center;
+}
+
+.delete, .edit{
+    height: 20px;
+    width: auto;
+}

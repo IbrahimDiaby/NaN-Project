@@ -3,7 +3,7 @@ footer{
     padding: 1.5% 0px 10px 0px;
     height: 30px;
     width: 100%;
-    background-image: url('../../Images/font.png');
+    background-image: url("../Images/font.png");
 }
 
 footer p{

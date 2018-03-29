@@ -41,7 +41,7 @@ article{
     
 }
 
-.group:hover{
+section > .bigcontainer article  .group:hover{
     margin: 0px 10px;
     width: 400px;
     height: 400px;

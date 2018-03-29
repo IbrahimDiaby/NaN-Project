@@ -28,14 +28,6 @@ header{
     font-size: 23px;
 }
 
-#logo > h1 > a{
-    text-decoration: none;
-}
-
-#logo > h1 > a:visited{
-    color: rgba(153,117,253,1);
-}
-
 nav{
     margin: 0px;
     padding: 0px;
@@ -53,7 +45,6 @@ nav ul li{
     float: right;
     padding: 0px 15px 0px 0px;
     margin: 10px 0px 0px 0px;
-    color: #fff;
 }
 
 nav a{
@@ -70,11 +61,8 @@ nav a{
 }
 
 .table-logo{
-    margin: 4px 10px 0px 0px;
+    margin: 5px 10px 0px 0px;
     height: 19px;
     width: 19px;
 }
 
-.table-logo:hover{
-    opacity: 0.1;
-}

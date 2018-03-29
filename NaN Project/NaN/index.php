@@ -48,7 +48,6 @@
                 <li><a href="#">#<?php echo $_COOKIE['username'] ?><img src="../Images/form.png" alt="" class="imgSudo_Su" title="Administrateur" /></a>
                     <ul>
                         <li><a href="#">Créez</a></li>
-                        <li><a href="#">Ajoutez</a></li>
                         <li><a href="#">Modifiez les informations</a></li>
                         <li><a href="#">Supprimer</a></li>
                     </ul>
@@ -57,7 +56,6 @@
                 <li><a href="../Etudiants/index.php">Etudiants <img src="../Images/students.png" alt="" class="students" title="Etudiants" /></a>
                     <ul>
                         <li><a href="#">Créez</a></li>
-                        <li><a href="#">Ajoutez</a></li>
                         <li><a href="#">Modifiez les informations</a></li>
                         <li><a href="#">Supprimer</a></li>
                     </ul>
@@ -67,7 +65,6 @@
                     <ul>
                         <li><a href="#">Créez <img src="../Images/info.png" alt="" class="info" title="Equipe Z Info" /></a></li>
                         <li><a href="#">Ajoutez un étudiant <img src="../Images/info.png" alt="" class="info" title="Equipe A Info" /></a></li>
-                        <li><a href="#">Modifiez les informations </a></li>
                         <li><a href="#">Supprimer</a></li>
                     </ul>
                 </li>
@@ -82,7 +79,6 @@
                 <li><a href="../Groupes/index.php">Groupes <img src="../Images/group.png" alt="" class="group" title="Equipes" /></a>
                     <ul>
                         <li><a href="#">Créez</a></li>
-                        <li><a href="#">Ajoutez un étudiant</a></li>
                         <li><a href="#">Modifiez les informations</a></li>
                         <li><a href="#">Supprimer</a></li>
                     </ul>

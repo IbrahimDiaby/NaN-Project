@@ -1,27 +1,28 @@
-<?php 
+<?php
+    if(!($_POST['name'] == "")){
 
-$bdd = new PDO("mysql:host=localhost;dbname=NaN", 'root', 'root');
-// $reponse = $bdd->query('SELECT * FROM Visiteurs');
-$requete = $bdd->prepare('INSERT INTO Etudiants(Nom, Prenom, Age, Mail, Localisation, Activite, Groupe, Equipe)
-VALUES(?, ?, ?, ?, ?, ?, ?, ?)');
-$requete->execute(array(htmlspecialchars($_POST['name']), htmlspecialchars($_POST['surname']), htmlspecialchars($_POST['old']), htmlspecialchars($_POST['mail']), htmlspecialchars($_POST['locate']), htmlspecialchars($_POST['activity']), htmlspecialchars($_POST['group']), htmlspecialchars($_POST['equipe'])));
+    $bdd = new PDO("mysql:host=localhost;dbname=NaN", 'root', 'root');
+    // $reponse = $bdd->query('SELECT * FROM Visiteurs');
+    $requete = $bdd->prepare('INSERT INTO Etudiants(Nom, Prenom, Age, Mail, Localisation, Activite, Groupe, Equipe)
+    VALUES(?, ?, ?, ?, ?, ?, ?, ?)');
+    $requete->execute(array(htmlspecialchars($_POST['name']), htmlspecialchars($_POST['surname']), htmlspecialchars($_POST['old']), htmlspecialchars($_POST['mail']), htmlspecialchars($_POST['locate']), htmlspecialchars($_POST['activity']), htmlspecialchars($_POST['group']), htmlspecialchars($_POST['equipe'])));
     // setcookie("username", $_POST['username'], time() + 3600*24*30);
     // $_COOKIE['username'] = $_POST['username'];
-?>
 
-<?php
-$equipe= htmlspecialchars($_POST['equipe']);
-if(isset ($equipe) && $equipe === "EquipeZ"){
-    $requete1 = $bdd->prepare('INSERT INTO EquipeZ(Membres, Mail, Age, Localisation, Groupe, Activite)
-    VALUES(?, ?, ?, ?, ?, ?)');
-    $requete1->execute(array(htmlspecialchars($_POST['name'] . " " . $_POST['surname']), htmlspecialchars($_POST['mail']), htmlspecialchars($_POST['old']), htmlspecialchars($_POST['locate']), htmlspecialchars($_POST['group']), htmlspecialchars($_POST['activity'])));
+    $equipe= htmlspecialchars($_POST['equipe']);
+    if(isset ($equipe) && $equipe === "EquipeZ"){
+        $requete1 = $bdd->prepare('INSERT INTO EquipeZ(Membres, Mail, Age, Localisation, Groupe, Activite)
+        VALUES(?, ?, ?, ?, ?, ?)');
+        $requete1->execute(array(htmlspecialchars($_POST['name'] . " " . $_POST['surname']), htmlspecialchars($_POST['mail']), htmlspecialchars($_POST['old']), htmlspecialchars($_POST['locate']), htmlspecialchars($_POST['group']), htmlspecialchars($_POST['activity'])));
+    }
+    
+    else if(isset ($equipe) && $equipe === "EquipeA"){
+        $requete2 = $bdd->prepare('INSERT INTO EquipeA(Membres, Mail, Age, Localisation, Groupe, Activite)
+        VALUES(?, ?, ?, ?, ?, ?)');
+        $requete2->execute(array(htmlspecialchars($_POST['name'] . " " . $_POST['surname']), htmlspecialchars($_POST['mail']), htmlspecialchars($_POST['old']), htmlspecialchars($_POST['locate']), htmlspecialchars($_POST['group']), htmlspecialchars($_POST['activity'])));
+    }
 }
 
-else if(isset ($equipe) && $equipe === "EquipeA"){
-    $requete2 = $bdd->prepare('INSERT INTO EquipeA(Membres, Mail, Age, Localisation, Groupe, Activite)
-    VALUES(?, ?, ?, ?, ?, ?)');
-    $requete2->execute(array(htmlspecialchars($_POST['name'] . " " . $_POST['surname']), htmlspecialchars($_POST['mail']), htmlspecialchars($_POST['old']), htmlspecialchars($_POST['locate']), htmlspecialchars($_POST['group']), htmlspecialchars($_POST['activity'])));
-}
 ?>
 
 <!DOCTYPE html>

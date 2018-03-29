@@ -34,48 +34,26 @@
                     <a href="#"><div class="group"></div></a>
                     <a href="#"><div class="group"></div></a>
                 </article>
-        
-                <div class="name">
-                    <div><p>Groupe A</p></div>
-                    <div><p>Groupe B</p></div>
-                    <div><p>Groupe C</p></div>
-                </div>
-        
+    
                 <article>
                     <a href="#"><div class="group"></div></a>
                     <a href="#"><div class="group"></div></a>
                     <a href="#"><div class="group"></div></a>
                 </article>
-        
-                <div class="name">
-                        <div><p>Groupe D</p></div>
-                        <div><p>Groupe E</p></div>
-                        <div><p>Groupe F</p></div>
-                </div>
-        
+
                 <article>
                     <a href="#"><div class="group"></div></a>
                     <a href="#"><div class="group"></div></a>
                     <a href="#"><div class="group"></div></a>
                 </article>
-        
-                <div class="name">
-                        <div><p>Groupe H</p></div>
-                        <div><p>Groupe I</p></div>
-                        <div><p>Groupe J</p></div>
-                </div>
-        
+
                 <article>
                     <a href="#"><div class="group"></div></a>
                     <a href="#"><div class="group"></div></a>
                     <a href="#"><div class="group"></div></a>
                 </article>
-        
-                <div class="name">
-                        <div><p>Groupe K</p></div>
-                        <div><p>Groupe L</p></div>
-                        <div><p>Groupe M</p></div>
-                </div>
+    
+
         </div>
     </section>
 

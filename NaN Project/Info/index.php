@@ -1,11 +1,11 @@
 <?php
-
     $ID1 = $ID2 = 1;
     $bdd = new PDO('mysql:host=localhost;dbname=NaN', 'root', 'root');
 
     $requete1 = $bdd->query('SELECT * FROM EquipeZ');    
     $requete2 = $bdd->query('SELECT * FROM EquipeA');
-    
+    $delete1 = $bdd->query('DELETE FROM EquipeZ WHERE ID=$_POST[\'index1\']');
+    $delete2 = $bdd->query('DELETE FROM EquipeA WHERE ID=$_POST[\'index2\']');
 ?>
 
 <!DOCTYPE html>
@@ -38,6 +38,7 @@
     <section>
     <div class="title1"><p>Equipe Z</p></div>
     <div class="container">
+    <div class="container">
     <table>
             <tr>
                 <th class="column">ID</th>
@@ -54,23 +55,25 @@
     while($donnees1 = $requete1->fetch()){
 ?>
             <tr>
-                <td class="column"><p><?php echo $ID1 ?></p></td>
+                <td class="column"><p><?php echo $donnees1['ID'] ?></p></td>
                 <td><p><?php echo $donnees1['Membres'] ?></p></td>
                 <td class="column"><p><?php echo $donnees1['Age'] ?></p></td>
                 <td><p><?php echo $donnees1['Activite'] ?></p></td>
                 <td class="column"><p><?php echo $donnees1['Groupe'] ?></p></td>
                 <td><p><?php echo $donnees1['Localisation'] ?></p></td>
                 <td class="column"><p><a href="#"><img src="../Images/edit.png" alt="" title="Modifier" class="edit"/></a></p></td>
-                <td><p><a href="#"><img src="../Images/delete.png" alt="" title="supprimer" class="delete"/></a></td>
+                <td><p><a href="<?php echo $_SERVER['PHP_SELF'] ?>"><img src="../Images/delete.png" alt="" title="supprimer" class="delete"/>
+                    <?php $delete1 = $bdd->query("DELETE FROM EquipeZ WHERE ID=$donnees1[ID]"); ?>
+            </a></td>
             </tr>
 <?php
 $ID1++;   
 }
 ?>
     </div>
+    </div>
     </table>
     <div class="title1"><p>Equipe A<p></div>
-    <div class="container">
     <table>
             <tr>
                 <th class="column">ID</th>
@@ -87,14 +90,17 @@ $ID1++;
     while($donnees2 = $requete2->fetch()){
 ?>
             <tr>
-                <td class="column"><p><?php echo $ID2 ?></p></td>
+                <td class="column"><p><?php echo $donnees2['ID'] ?></p></td>
                 <td><p><?php echo $donnees2['Membres'] ?></p></td>
                 <td class="column"><p><?php echo $donnees2['Age'] ?></p></td>
                 <td><p><?php echo $donnees2['Activite'] ?></p></td>
                 <td class="column"><p><?php echo $donnees2['Groupe'] ?></p></td>
                 <td><p><?php echo $donnees2['Localisation'] ?></p></td>
                 <td class="column"><p><a href="#"><img src="../Images/edit.png" alt="" title="Modifier" class="edit"/></a></p></td>
-                <td><p><a href="#"><img src="../Images/delete.png" alt="" title="supprimer" class="delete"/></a></p></td>
+                <td>
+                    <p><a href="<?php echo $_SERVER['PHP_SELF'] ?>"><img src="../Images/delete.png" alt="" title="supprimer" class="delete"/>
+                    
+            </a></p></td>
             </tr>
 
 <?php
@@ -102,10 +108,25 @@ $ID1++;
 $ID2++;    
 }
 ?>
-    </div>
     </table>
 <br /><br /><br /><br />
    
+    <div class="sup">
+        <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST">
+            <label for="index1">
+                Entrer l'index de l'étudiant à supprimer dans l'équipe Z:<br /><input type="text" name="index1" id="index1" class="index"/><br />
+            </label>
+
+            <label for="index2">
+                Entrer l'index de l'étudiant à supprimer dans l'équipe A:<br /><input type="text" name="index2" id="index2" class="index"/><br />
+            </label>
+            <label for="supp">
+                <input type="submit" value="Supprimer" />
+            </label>
+            
+        </form>
+    </div>
+
     </section>
     
     <footer>

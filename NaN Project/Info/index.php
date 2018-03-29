@@ -4,8 +4,8 @@
 
     $requete1 = $bdd->query('SELECT * FROM EquipeZ');    
     $requete2 = $bdd->query('SELECT * FROM EquipeA');
-    $delete1 = $bdd->query('DELETE FROM EquipeZ WHERE ID=$_POST[\'index1\']');
-    $delete2 = $bdd->query('DELETE FROM EquipeA WHERE ID=$_POST[\'index2\']');
+    $delete1 = $bdd->query("DELETE FROM EquipeZ WHERE ID=$_POST[index1]");
+    $delete2 = $bdd->query("DELETE FROM EquipeA WHERE ID=$_POST[index2]");
 ?>
 
 <!DOCTYPE html>
@@ -48,7 +48,6 @@
                 <th class="column">Groupe</th>
                 <th>Localisation</th>
                 <th class="column">Modifier</th>
-                <th>Supprimer</th>
             </tr>
     <?php
 
@@ -62,9 +61,6 @@
                 <td class="column"><p><?php echo $donnees1['Groupe'] ?></p></td>
                 <td><p><?php echo $donnees1['Localisation'] ?></p></td>
                 <td class="column"><p><a href="#"><img src="../Images/edit.png" alt="" title="Modifier" class="edit"/></a></p></td>
-                <td><p><a href="<?php echo $_SERVER['PHP_SELF'] ?>"><img src="../Images/delete.png" alt="" title="supprimer" class="delete"/>
-                    <?php $delete1 = $bdd->query("DELETE FROM EquipeZ WHERE ID=$donnees1[ID]"); ?>
-            </a></td>
             </tr>
 <?php
 $ID1++;   
@@ -73,6 +69,7 @@ $ID1++;
     </div>
     </div>
     </table>
+    
     <div class="title1"><p>Equipe A<p></div>
     <table>
             <tr>
@@ -83,7 +80,6 @@ $ID1++;
                 <th class="column">Groupe</th>
                 <th>Localisation</th>
                 <th class="column">Modifier</th>
-                <th>Supprimer</th>
             </tr>
 <?php
 
@@ -96,11 +92,7 @@ $ID1++;
                 <td><p><?php echo $donnees2['Activite'] ?></p></td>
                 <td class="column"><p><?php echo $donnees2['Groupe'] ?></p></td>
                 <td><p><?php echo $donnees2['Localisation'] ?></p></td>
-                <td class="column"><p><a href="#"><img src="../Images/edit.png" alt="" title="Modifier" class="edit"/></a></p></td>
-                <td>
-                    <p><a href="<?php echo $_SERVER['PHP_SELF'] ?>"><img src="../Images/delete.png" alt="" title="supprimer" class="delete"/>
-                    
-            </a></p></td>
+                <td class="column"><p><a href="#"><img src="../Images/edit.png" alt="" title="Modifier" class="edit"/></a></p></td>>
             </tr>
 
 <?php

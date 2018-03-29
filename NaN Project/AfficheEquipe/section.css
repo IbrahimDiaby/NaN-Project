@@ -27,16 +27,16 @@ h1:hover{
 article{
     margin: 20px auto;
     padding: 0px;
-    width: 75%;
+    width: 52%;
     height: auto;
     display: flex;
 }
 
 .group{
-    margin: 0px 40px;
+    margin: 0px 20px;
     padding: 0px;
-    width: 400px;
-    height: 350px;
+    width: 200px;
+    height: 200px;
     background-color: #000000;
 }
 

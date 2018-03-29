@@ -33,17 +33,13 @@
                     <a href="#"><div class="group"></div></a>
                     <a href="#"><div class="group"></div></a>
                     <a href="#"><div class="group"></div></a>
+                    <a href="#"><div class="group"></div></a>
                 </article>
     
                 <article>
                     <a href="#"><div class="group"></div></a>
                     <a href="#"><div class="group"></div></a>
                     <a href="#"><div class="group"></div></a>
-                </article>
-
-                <article>
-                    <a href="#"><div class="group"></div></a>
-                    <a href="#"><div class="group"></div></a>
                     <a href="#"><div class="group"></div></a>
                 </article>
 
@@ -51,7 +47,9 @@
                     <a href="#"><div class="group"></div></a>
                     <a href="#"><div class="group"></div></a>
                     <a href="#"><div class="group"></div></a>
+                    <a href="#"><div class="group"></div></a>
                 </article>
+
     
 
         </div>

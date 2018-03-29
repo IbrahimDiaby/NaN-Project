@@ -11,6 +11,13 @@ h1{
     border: 3px solid #000000;
 }
 
+.bigcontainer{
+    margin: 0px auto;
+    padding: 0px;
+    width: 90%;
+    height: auto;
+}
+
 h1:hover{
     border: 1px solid rgba(153,117,253,1);
     color: rgba(153,117,253,1);
@@ -20,7 +27,7 @@ h1:hover{
 article{
     margin: 20px auto;
     padding: 0px;
-    width: 90%;
+    width: 75%;
     height: auto;
     display: flex;
 }
@@ -28,7 +35,7 @@ article{
 .group{
     margin: 0px 40px;
     padding: 0px;
-    width: 350px;
+    width: 400px;
     height: 350px;
     background-color: #000000;
     
@@ -46,15 +53,15 @@ article{
 .name{
     margin: 0px auto;
     padding: 0px;
-    width: 90%;
+    width: 70%;
     height: 40px;
     display: flex;
 }
 
 .name > div{
-    margin: 0px 40px;
+    margin: 0px 0px 0px 0px;
     padding: 0px;
-    width: 350px;
+    width: 100%;
     height: 100%;
     background-color: #000000;
 }

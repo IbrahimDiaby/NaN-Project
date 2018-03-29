@@ -6,6 +6,10 @@ section{
     display: flex;
 }
 
+.team > a:hover{
+    color: rgba(153,117,253,1);
+}
+
 .aside-left{
     margin: 0px;
     padding: 0px;

@@ -1,5 +1,9 @@
 <?php 
-    setcookie("username", $_POST['username'], time() + 3600*24*30);
+
+    $bdd = new PDO('mysql:host=localhost;dbname=NaN', 'root', 'root');
+    $requete1 = $bdd->query('SELECT Mail FROM EquipeZ');
+    $requete2 = $bdd->query('SELECT Mail FROM EquipeA');
+    // setcookie("username", $_POST['username'], time() + 3600*24*30);
     // $_COOKIE['username'] = $_POST['username'];
 ?>
 
@@ -114,8 +118,10 @@
                     <div class="contain">
                         <!-- Mettre le code PhP a la place des mails pour prendre en place les mails de tous les etudiants -->
                         <h1>Envoyez-un mail à :</h1>
-                        <p><a href="mailto:ibrahim.diaby@uvci.edu.ci">Equipes Z</a></p>
-                        <p><a href="mailto:d.ibrahim2016@gmail.com,ddd@gmail.com,">Equipes A</a></p>
+                        <p class="team"><a href="mailto:<?php while($equipeZ = $requete1->fetch()){
+                            echo $equipeZ['Mail'] . ','; }?>">Equipes Z</a></p>
+                        <p class="team"><a href="mailto:<?php while($equipeA = $requete2->fetch()){
+                            echo $equipeA['Mail'] . ','; }?>">Equipes A</a></p>
                     </div>
                 </article>
                  

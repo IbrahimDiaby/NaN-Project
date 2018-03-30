@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost
--- Généré le :  jeu. 29 mars 2018 à 17:23
+-- Généré le :  ven. 30 mars 2018 à 23:53
 -- Version du serveur :  5.6.38
 -- Version de PHP :  7.2.1
 
@@ -53,14 +53,6 @@ CREATE TABLE `EquipeA` (
   `Groupe` varchar(255) NOT NULL,
   `Activite` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Déchargement des données de la table `EquipeA`
---
-
-INSERT INTO `EquipeA` (`ID`, `Membres`, `Mail`, `Age`, `Localisation`, `Groupe`, `Activite`) VALUES
-(9, 'szertyukilom$mlkq sertyuiop^$', 'gyuiù%mdf', 18, 'yuiopooiu', 'Genesis', 'Etudiants'),
-(11, 'szertyukilom$mlkq sertyuiop^$', 'gyuiù%mdf', 18, 'yuiopooiu', 'Genesis', 'Etudiants');
 
 -- --------------------------------------------------------
 
@@ -141,6 +133,7 @@ CREATE TABLE `Groupes` (
   `Notes` int(11) NOT NULL,
   `BonusMalus` int(11) NOT NULL,
   `Motifs-Bonus-Malus` text NOT NULL,
+  `Jaime` int(11) NOT NULL,
   `Commentaires` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -174,10 +167,16 @@ CREATE TABLE `LikeGroupes` (
 
 CREATE TABLE `SemiSudo` (
   `ID` int(11) NOT NULL,
-  `NomAdmin` varchar(255) NOT NULL,
-  `Mail` varchar(255) NOT NULL,
+  `Nom` varchar(255) NOT NULL,
   `Password` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `SemiSudo`
+--
+
+INSERT INTO `SemiSudo` (`ID`, `Nom`, `Password`) VALUES
+(1, 'Semi NaN Root', '#SemiNaNroot2018');
 
 -- --------------------------------------------------------
 
@@ -310,7 +309,7 @@ ALTER TABLE `CommentairesGroupes`
 -- AUTO_INCREMENT pour la table `EquipeA`
 --
 ALTER TABLE `EquipeA`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT pour la table `EquipeZ`
@@ -352,7 +351,7 @@ ALTER TABLE `LikeGroupes`
 -- AUTO_INCREMENT pour la table `SemiSudo`
 --
 ALTER TABLE `SemiSudo`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT pour la table `Sudo`

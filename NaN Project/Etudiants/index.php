@@ -6,8 +6,8 @@
     $requete = $bdd->prepare('INSERT INTO Etudiants(Nom, Prenom, Age, Mail, Localisation, Activite, Groupe, Equipe)
     VALUES(?, ?, ?, ?, ?, ?, ?, ?)');
     $requete->execute(array(htmlspecialchars($_POST['name']), htmlspecialchars($_POST['surname']), htmlspecialchars($_POST['old']), htmlspecialchars($_POST['mail']), htmlspecialchars($_POST['locate']), htmlspecialchars($_POST['activity']), htmlspecialchars($_POST['group']), htmlspecialchars($_POST['equipe'])));
-    // setcookie("username", $_POST['username'], time() + 3600*24*30);
-    // $_COOKIE['username'] = $_POST['username'];
+    setcookie("username", $_POST['username'], time() + 3600*24*30);
+    $_COOKIE['username'] = $_POST['username'];
 
     $equipe= htmlspecialchars($_POST['equipe']);
     if(isset ($equipe) && $equipe === "EquipeZ"){

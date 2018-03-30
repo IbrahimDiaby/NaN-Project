@@ -1,3 +1,7 @@
+<?php
+    setcookie("username", $_POST['name'], time() + 3600*24*30 );
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>

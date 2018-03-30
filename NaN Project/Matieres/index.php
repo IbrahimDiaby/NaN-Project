@@ -130,7 +130,9 @@
                         <h1>Commentaires<img src="../Images/comment.png" alt="" title="Commentaires" class="comment-logo"/></h1>
                     </div>
                     <div class="contain">
-                        <h1>Pas de commentaires sur un étudiant pour le moment...</h1>
+                        <h1>Mettre un commentaire sur un :</h1>
+                        <p class="team"><a href="../CommentGroup/index.php">Groupe</a></p>
+                        <p class="team"><a href="../CommentStudent/index.php">Etudiant</a></p>
                     </div>
                 </article>
             </div>

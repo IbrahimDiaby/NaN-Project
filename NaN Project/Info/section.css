@@ -73,6 +73,8 @@ input[type="text"]{
     margin: 0px;
     padding: 0px;
     width: 95%;
+    text-align: center;
+    font-size: 20px;
     height: 40px;
 }
 
@@ -90,4 +92,14 @@ input[type="submit"]{
 input[type="submit"]:hover{
     background-color: red;
     border: 5px solid red;
+}
+
+.suppress a{
+    color: greenyellow;
+    text-decoration: none;
+}
+
+.suppress a:hover{
+    color: red;
+    text-decoration: none;
 }

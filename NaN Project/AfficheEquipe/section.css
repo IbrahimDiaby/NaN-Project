@@ -18,7 +18,7 @@ h1{
     height: auto;
 }
 
-h1:hover{
+.bigcontainer h1:hover{
     border: 1px solid rgba(153,117,253,1);
     color: rgba(153,117,253,1);
     transition: border 0.3s ease 0.3s;
@@ -35,8 +35,8 @@ article{
 .group{
     margin: 0px 20px;
     padding: 0px;
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     background-color: #000000;
 }
 

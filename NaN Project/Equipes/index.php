@@ -3,8 +3,7 @@
     // $reponse = $bdd->query('SELECT * FROM Visiteurs');
 
     if(isset($_POST['group'])){
-        $requete = $bdd->prepare('INSERT INTO Groupes(Nom, Equipe)
-        VALUES(?, ?)');
+        $requete = $bdd->prepare('INSERT INTO Groupes(Nom, Equipe) VALUES(?, ?)');
         $requete->execute(array(htmlspecialchars($_POST['group']), htmlspecialchars($_POST['equipe'])));
     }
     

@@ -1,4 +1,6 @@
 <?php 
+
+if(!($_POST['name'] == "")){
     $bdd = new PDO("mysql:host=localhost;dbname=NaN", 'root', 'root');
     // $reponse = $bdd->query('SELECT * FROM Visiteurs');
     $requete = $bdd->prepare('INSERT INTO Visiteurs(Nom, Prenoms, Mail, Password, Activite, Localisation)
@@ -6,7 +8,9 @@
     $requete->execute(array(htmlspecialchars($_POST['name']), htmlspecialchars($_POST['surname']),htmlspecialchars($_POST['mail']),htmlspecialchars($_POST['password']),htmlspecialchars($_POST['activity']),htmlspecialchars($_POST['locate'])));
 
     setcookie("username", $_POST['username'], time() + 3600*24*30);
-    // $_COOKIE['username'] = $_POST['username'];
+    $_COOKIE['username'] = $_POST['username'];
+}
+
 
 ?>
 

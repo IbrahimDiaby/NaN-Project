@@ -1,9 +1,13 @@
 <?php
+    
+    setcookie('username', '', time() + 3600*24*30);
+    $bdd = new PDO('mysql:host=localhost;dbname=NaN', 'root', 'root');
+    $requete = $bdd->query('SELECT * FROM CommentairesGroupes');
     if(!($_POST['group'] == "") && !($_POST['comment'] == "")){
-        $bdd = new PDO('mysql:host=localhost;dbname=NaN', 'root', 'root');
         $send = $bdd->prepare('INSERT INTO CommentairesGroupes(Groupe,Commentaires) VALUES(?,?)');
         $send->execute(array(htmlspecialchars($_POST['group']),htmlspecialchars($_POST['comment'])));
     }
+
 ?>
 
 <!DOCTYPE html>
@@ -34,7 +38,17 @@
 
     <section>
         <article>
-            
+
+        <div class="commentaire">
+            <?php
+                while($liste = $requete->fetch()){
+            ?>
+            <p><strong>#<?php echo $_COOKIE['username'] ?></strong> Au Sujet Du Groupe : <strong><?php echo $liste['Groupe'] ?></strong> : <strong><?php echo $liste['Commentaires'] ?></strong></p>
+            <?php
+    }
+            ?>
+        </div>
+        
             <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST">
                 <label for="group">
                     <br /><input type="text" name="group" id="group" placeholder="Nom Du Groupe" required/><br />
@@ -49,7 +63,6 @@
                     <input type="submit" name="submit" id="submit" value="Envoyer" />
                 </label>
             </form>
-
         </article>
     </section>
     

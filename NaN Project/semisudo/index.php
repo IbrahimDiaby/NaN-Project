@@ -1,9 +1,12 @@
 <?php 
 $bdd = new PDO("mysql:host=localhost;dbname=NaN", 'root', 'root');
 // $reponse = $bdd->query('SELECT * FROM Visiteurs');
-$requete = $bdd->prepare('INSERT INTO SemiSudo(NomAdmin, Mail, Password)
-VALUES(?, ?, ?)');
-$requete->execute(array(htmlspecialchars($_POST['name'] . " " . $_POST['surname']), htmlspecialchars($_POST['mail']), htmlspecialchars($_POST['password'])));
+if(!($_POST['name'] == "") && !($_POST['surname'] == "")){
+    $requete = $bdd->prepare('INSERT INTO SemiSudo(Nom, Mail, Passwords)
+    VALUES(?, ?, ?)');
+    $requete->execute(array(htmlspecialchars($_POST['name'] . " " . $_POST['surname']), htmlspecialchars($_POST['mail']), htmlspecialchars($_POST['password'])));
+}
+
     // setcookie("username", $_POST['username'], time() + 3600*24*30);
     // $_COOKIE['username'] = $_POST['username'];
 ?>
@@ -22,7 +25,7 @@ $requete->execute(array(htmlspecialchars($_POST['name'] . " " . $_POST['surname'
 <body>
     <header>
         <div id="logo">
-            <h1><img src="../Images/NaN.png" alt="" title="" class="table-logo"/>NaN - Matières</h1>
+            <h1><img src="../Images/NaN.png" alt="" title="" class="table-logo"/><a href="../NaN/index.php">NaN - Matières</a></h1>
         </div>
         <nav>
             <ul>

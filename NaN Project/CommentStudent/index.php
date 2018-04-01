@@ -1,6 +1,8 @@
 <?php
+    setcookie('username', '', time() + 3600*24*30);
+    $bdd = new PDO('mysql:host=localhost;dbname=NaN', 'root', 'root');
+    $requete = $bdd->query('SELECT * FROM CommentairesEtudiants');
     if(!($_POST['student'] == "") && !($_POST['comment'] == "")){
-        $bdd = new PDO('mysql:host=localhost;dbname=NaN', 'root', 'root');
         $send = $bdd->prepare('INSERT INTO CommentairesEtudiants(Etudiants,Commentaires) VALUES(?,?)');
         $send->execute(array(htmlspecialchars($_POST['student']),htmlspecialchars($_POST['comment'])));
     }
@@ -34,7 +36,16 @@
 
     <section>
         <article>
-            
+        <div class="commentaire">
+            <?php
+                while($liste = $requete->fetch()){
+            ?>
+            <p><strong>#<?php echo $_COOKIE['username'] ?></strong> Au Sujet De L'Étudiant : <strong><?php echo $liste['Etudiants'] ?></strong> : <strong><?php echo $liste['Commentaires'] ?></strong></p>
+            <?php
+                }
+            ?>
+        </div>
+
             <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST">
                 <label for="student">
                     <br /><input type="text" name="student" id="student" placeholder="Nom De L'étudiant" required/><br />
@@ -49,7 +60,6 @@
                     <input type="submit" name="submit" id="submit" value="Envoyer" />
                 </label>
             </form>
-
         </article>
     </section>
     

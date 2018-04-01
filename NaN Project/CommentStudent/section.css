@@ -2,7 +2,7 @@ section{
     margin: 0px;
     padding: 0px;
     width: 100%;
-    height: 100%;
+    height: auto;
 }
 
 article{
@@ -55,4 +55,15 @@ input[type="submit"]{
 input[type="submit"]:hover{
     background-color: greenyellow;
     text-transform: uppercase;
+}
+
+.commentaire{
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: auto;
+}
+
+.commentaire p{
+    text-align: center;
 }

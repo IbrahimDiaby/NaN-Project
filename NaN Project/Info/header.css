@@ -28,6 +28,15 @@ header{
     font-size: 23px;
 }
 
+#logo h1 a{
+    color: rgba(153,117,253,1);
+    text-decoration: none;
+}
+
+#logo h1 a:visited{
+    color: rgba(153,117,253,1);
+}
+
 nav{
     margin: 0px;
     padding: 0px;

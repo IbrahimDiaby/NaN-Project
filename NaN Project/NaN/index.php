@@ -55,7 +55,7 @@
 
                 <li><a href="../Etudiants/index.php">Etudiants <img src="../Images/students.png" alt="" class="students" title="Etudiants" /></a>
                     <ul>
-                        <li><a href="#">Créez</a></li>
+                        <li><a href="../Etudiants/index.php">Créez</a></li>
                         <li><a href="#">Modifiez les informations</a></li>
                         <li><a href="#">Supprimer</a></li>
                     </ul>
@@ -63,7 +63,7 @@
 
                 <li><a href="../Equipes/index.php">Equipes <img src="../Images/users.png" alt="" class="users" title="Equipes" /></a>
                     <ul>
-                        <li><a href="#">Créez <img src="../Images/info.png" alt="" class="info" title="Equipe Z Info" /></a></li>
+                        <li><a href="../Equipes/index.php">Créez <img src="../Images/info.png" alt="" class="info" title="Equipe Z Info" /></a></li>
                         <li><a href="#">Ajoutez un étudiant <img src="../Images/info.png" alt="" class="info" title="Equipe A Info" /></a></li>
                         <li><a href="#">Supprimer</a></li>
                     </ul>
@@ -71,14 +71,14 @@
 
                 <li><a href="#">Equipes Existantes <img src="../Images/users.png" alt="" class="users" title="Equipes" /></a>
                     <ul>
-                        <li><a href="#">Equipe Z <img src="../Images/info.png" alt="" class="info" title="Equipe Z Info" /></a></li>
-                        <li><a href="#">Equipes A <img src="../Images/info.png" alt="" class="info" title="Equipe A Info" /></a></li>
+                        <li><a href="../Info/index.php">Equipe Z <img src="../Images/info.png" alt="" class="info" title="Equipe Z Info" /></a></li>
+                        <li><a href="../Info/index.php">Equipes A <img src="../Images/info.png" alt="" class="info" title="Equipe A Info" /></a></li>
                     </ul>
                 </li>
 
                 <li><a href="../Groupes/index.php">Groupes <img src="../Images/group.png" alt="" class="group" title="Equipes" /></a>
                     <ul>
-                        <li><a href="#">Créez</a></li>
+                        <li><a href="../Groupes/index.php">Créez</a></li>
                         <li><a href="#">Modifiez les informations</a></li>
                         <li><a href="#">Supprimer</a></li>
                     </ul>

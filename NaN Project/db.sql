@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost
--- Généré le :  ven. 30 mars 2018 à 23:53
+-- Généré le :  lun. 02 avr. 2018 à 17:20
 -- Version du serveur :  5.6.38
 -- Version de PHP :  7.2.1
 
@@ -13,6 +13,19 @@ SET time_zone = "+00:00";
 --
 -- Base de données :  `NaN`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `BonusMalus`
+--
+
+CREATE TABLE `BonusMalus` (
+  `ID` int(11) NOT NULL,
+  `EtudiantsGroupes` varchar(255) NOT NULL,
+  `BonusMalus` int(11) NOT NULL,
+  `MotifsBonusMalus` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -95,11 +108,11 @@ CREATE TABLE `Etudiants` (
 --
 
 CREATE TABLE `EtudiantsNotes` (
+  `ID` int(11) NOT NULL,
   `Nom` varchar(255) NOT NULL,
   `Prenom` varchar(255) NOT NULL,
-  `Mail` varchar(255) NOT NULL,
-  `Notes` int(11) NOT NULL,
-  `BonusMalus` int(11) NOT NULL
+  `Matieres` varchar(255) NOT NULL,
+  `Notes` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -129,12 +142,20 @@ CREATE TABLE `Ex-Etudiants` (
 CREATE TABLE `Groupes` (
   `ID` int(11) NOT NULL,
   `Nom` varchar(255) NOT NULL,
-  `Equipe` varchar(255) NOT NULL,
-  `Notes` int(11) NOT NULL,
-  `BonusMalus` int(11) NOT NULL,
-  `Motifs-Bonus-Malus` text NOT NULL,
-  `Jaime` int(11) NOT NULL,
-  `Commentaires` text NOT NULL
+  `Equipe` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `GroupesNotes`
+--
+
+CREATE TABLE `GroupesNotes` (
+  `ID` int(11) NOT NULL,
+  `Groupe` varchar(255) NOT NULL,
+  `Matieres` varchar(255) NOT NULL,
+  `Notes` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -168,15 +189,9 @@ CREATE TABLE `LikeGroupes` (
 CREATE TABLE `SemiSudo` (
   `ID` int(11) NOT NULL,
   `Nom` varchar(255) NOT NULL,
-  `Password` varchar(255) NOT NULL
+  `Mail` varchar(255) NOT NULL,
+  `Passwords` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Déchargement des données de la table `SemiSudo`
---
-
-INSERT INTO `SemiSudo` (`ID`, `Nom`, `Password`) VALUES
-(1, 'Semi NaN Root', '#SemiNaNroot2018');
 
 -- --------------------------------------------------------
 
@@ -218,6 +233,12 @@ CREATE TABLE `Visiteurs` (
 --
 
 --
+-- Index pour la table `BonusMalus`
+--
+ALTER TABLE `BonusMalus`
+  ADD PRIMARY KEY (`ID`);
+
+--
 -- Index pour la table `CommentairesEtudiants`
 --
 ALTER TABLE `CommentairesEtudiants`
@@ -248,6 +269,12 @@ ALTER TABLE `Etudiants`
   ADD KEY `ID` (`ID`) USING BTREE;
 
 --
+-- Index pour la table `EtudiantsNotes`
+--
+ALTER TABLE `EtudiantsNotes`
+  ADD PRIMARY KEY (`ID`);
+
+--
 -- Index pour la table `Ex-Etudiants`
 --
 ALTER TABLE `Ex-Etudiants`
@@ -257,6 +284,12 @@ ALTER TABLE `Ex-Etudiants`
 -- Index pour la table `Groupes`
 --
 ALTER TABLE `Groupes`
+  ADD PRIMARY KEY (`ID`);
+
+--
+-- Index pour la table `GroupesNotes`
+--
+ALTER TABLE `GroupesNotes`
   ADD PRIMARY KEY (`ID`);
 
 --
@@ -294,6 +327,12 @@ ALTER TABLE `Visiteurs`
 --
 
 --
+-- AUTO_INCREMENT pour la table `BonusMalus`
+--
+ALTER TABLE `BonusMalus`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT pour la table `CommentairesEtudiants`
 --
 ALTER TABLE `CommentairesEtudiants`
@@ -324,6 +363,12 @@ ALTER TABLE `Etudiants`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT pour la table `EtudiantsNotes`
+--
+ALTER TABLE `EtudiantsNotes`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT pour la table `Ex-Etudiants`
 --
 ALTER TABLE `Ex-Etudiants`
@@ -333,6 +378,12 @@ ALTER TABLE `Ex-Etudiants`
 -- AUTO_INCREMENT pour la table `Groupes`
 --
 ALTER TABLE `Groupes`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT pour la table `GroupesNotes`
+--
+ALTER TABLE `GroupesNotes`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
 
 --
@@ -351,7 +402,7 @@ ALTER TABLE `LikeGroupes`
 -- AUTO_INCREMENT pour la table `SemiSudo`
 --
 ALTER TABLE `SemiSudo`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT pour la table `Sudo`

@@ -52,7 +52,7 @@
     <table>
             <tr>
                 <th class="column">ID</th>
-                <th>Nom & Prénoms</th>
+                <th>Nom &amp; Prénoms</th>
                 <th class="column">Age</th>
                 <th>Activité</th>
                 <th class="column">Groupe</th>
@@ -63,7 +63,6 @@
     <?php
     
     while($donnees1 = $requete1->fetch()){
-    $ID1 = $_GET['ID1'];
 ?>
 
             <tr>
@@ -73,8 +72,8 @@
                 <td><p><?php echo $donnees1['Activite'] ?></p></td>
                 <td class="column"><p><?php echo $donnees1['Groupe'] ?></p></td>
                 <td><p><?php echo $donnees1['Localisation'] ?></p></td>
-                <td class="column"><p><a href="#"><img src="../Images/edit.png" alt="" title="Modifier" class="edit"/></a></p></td>
-                <td><p class="suppress"><a href="../Info/index.php?ID1=$ID1">X</a></p></td>
+                <td class="column"><p><a href="edit.php?id=<?php echo $donnees1['ID'] ?>"><img src="../Images/edit.png" alt="" title="Modifier" class="edit"/></a></p></td>
+                <td><p class="suppress"><a href="delete.php?id=<?php echo $donnees1['ID'] ?>">X</a></p></td>
             </tr>
 <?php
 }
@@ -98,7 +97,6 @@
 <?php
     
     while($donnees2 = $requete2->fetch()){
-        $ID2 = $_GET['ID2'];
 ?>
 
             <tr>
@@ -109,7 +107,7 @@
                 <td class="column"><p><?php echo $donnees2['Groupe'] ?></p></td>
                 <td><p><?php echo $donnees2['Localisation'] ?></p></td>
                 <td class="column"><p><a href="#"><img src="../Images/edit.png" alt="" title="Modifier" class="edit"/></a></p></td>
-                <td><p class="suppress"><a href="../Info/index.php?ID2=$ID2">X</a></p></td>
+                <td><p class="suppress"><a href="delete.php">X</a></p></td>
             </tr>
 
 <?php

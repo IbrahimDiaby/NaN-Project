@@ -66,7 +66,7 @@
                     </label>
     
                     <label for="submit">
-                        <input type="submit" name="submit" id="submit" value="Confirmer" />
+                        <input type="submit" name="submit" id="submit" value="Commenter" />
                     </label>
                 </form>
             </div>

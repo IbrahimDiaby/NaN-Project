@@ -39,6 +39,17 @@
             <div class="name">
                 <p>Nom Groupe</p>
             </div>
+
+            <div class="pages">
+                <nav>
+                    <h2>Avis</h2>
+                    <ul>
+                        <li><img src="../../Images/like.png" alt="Like" title="Like" class="like"/></li>
+                        <li><img src="../../Images/dislike.png" alt="Dislike" title="Dislike" class="dislike"/></li>
+                    </ul>
+                </nav>
+            </div>
+            
             <div class="pages">
                 <nav>
                     <h2>Réseaux Sociaux de la NaN</h2>
@@ -50,7 +61,7 @@
                     </ul>
                 </nav>
             </div>
-
+            
             <div class="pages">
                 <nav>
                     <ul>

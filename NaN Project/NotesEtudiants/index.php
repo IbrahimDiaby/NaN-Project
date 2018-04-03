@@ -57,7 +57,12 @@
                     Matières: <br /><input type="text" name="matieres" id="matieres" required /><br />
                 </label>
                 <label for="mark">
-                    Notes:  <br /> <input type="text" name="mark" id="mark" required /><br />
+                    Notes:  <br />
+                        <select id="mark" name="mark" >
+                            <option value="0">0</option>
+                            <option value="100">100</option>
+                        </select>
+                    <br />
                 </label>
                 <label for="submit">
                     <input type="submit" name="submit" id="submit" value="Confirmer" />

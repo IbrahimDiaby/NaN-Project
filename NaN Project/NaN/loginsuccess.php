@@ -1,15 +1,7 @@
 <?php
-
-    // $bdd = new PDO("mysql:host=localhost;dbname=NaN", "root", 'root');
-    // $reponse = $bdd->query('SELECT * FROM Sudo');
-    // while($donnees = $reponse->fetch()){
-    //     echo '<p>' . $donnees['ID'] . ' ' . $donnees['Nom'] . '</p>';
-    // }
-    
-    // $username = $_POST['username'];
-    setcookie("username", $username, time() + 3600*24*30);
-
-    $_COOKIE['username'] = $_POST['username'];
+        $db = new PDO("mysql:host=localhost;dbname=NaN", 'root', 'root');
+        session_start();
+        $_SESSION['username'] = $_POST['username'];
 ?>
 
 <!DOCTYPE html>
@@ -20,10 +12,10 @@
     <title>NaN Gestion</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Serif" rel="stylesheet"> -->
-    <link rel="stylesheet" type="text/css" media="screen" href="header.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="section.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="footer.css" />
-    <script src="index.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="loginsuccessheader.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="loginsuccesssection.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="loginsuccessfooter.css" />
+    <script src="loginsuccessindex.js"></script>
 </head>
 
 <body>
@@ -45,11 +37,11 @@
                     Vous etes connecté en tant que : 
                 </li>
                 
-                <li><a href="#">#<?php echo $_COOKIE['username'] ?><img src="../Images/form.png" alt="" class="imgSudo_Su" title="Administrateur" /></a>
+                <li><a href="#">#<?php echo $_SESSION['username'] ?><img src="../Images/form.png" alt="" class="imgSudo_Su" title="Administrateur" /></a>
                     <ul>
-                        <li><a href="#">Créez</a></li>
-                        <li><a href="#">Modifiez les informations</a></li>
-                        <li><a href="#">Supprimer</a></li>
+                        <li><a href="../semisudo/index.php">Créez un Semi Admin</a></li>
+                        <li><a href="../semisudo/edit.php">Modifiez les informations</a></li>
+                        <li><a href="../semisudo/delete.php">Supprimer</a></li>
                     </ul>
                 </li>
 
@@ -63,7 +55,7 @@
 
                 <li><a href="../Equipes/index.php">Equipes <img src="../Images/users.png" alt="" class="users" title="Equipes" /></a>
                     <ul>
-                        <li><a href="../Equipes/index.php">Créez <img src="../Images/info.png" alt="" class="info" title="Equipe Z Info" /></a></li>
+                        <li><a href="../CreateEquipes/index.php">Créez <img src="../Images/info.png" alt="" class="info" title="Equipe Z Info" /></a></li>
                         <li><a href="#">Ajoutez un étudiant <img src="../Images/info.png" alt="" class="info" title="Equipe A Info" /></a></li>
                         <li><a href="#">Supprimer</a></li>
                     </ul>
@@ -92,13 +84,16 @@
                         <li><a href="#">Localisation <img src="../Images/locate.png" alt="" class="located" title="Localisation" /></a></li>
                     </ul>
                 </li>
+
+                <li><a href="logout.php">Déconnexion</a></li>
+
             </ul>
         </nav>
 
         <article>
 
         <!-- Slideshow container -->
-<div class="slideshow-container">
+    <div class="slideshow-container">
 
     <!-- Full-width images with number and caption text -->
     <div class="mySlides fade">
@@ -191,7 +186,7 @@
                     <li><a href="#"><img src="../Images/blog.svg" alt="blog" title="Blog" class="blog"/></li></a>
                     <li><a href="#"><img src="../Images/github.svg" alt="github" title="Github" class="github"/></li></a>
                 </ul>
-            </div>
+        </div>
     </section>
 
     <footer>

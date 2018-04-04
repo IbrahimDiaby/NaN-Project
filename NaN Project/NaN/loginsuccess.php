@@ -85,7 +85,7 @@
                     </ul>
                 </li>
 
-                <li><a href="logout.php">Déconnexion</a></li>
+                <li><a href="logout.php">Déconnexion <img src="../Images/logout.png" alt="" class="logout" title="Logout" /></a></li>
 
             </ul>
         </nav>

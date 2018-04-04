@@ -1,6 +1,33 @@
-<?php 
-    setcookie("username", $_POST['username'], time() + 3600*24*30);
-    // $_COOKIE['username'] = $_POST['username'];
+<?php
+
+    $db = new PDO("mysql:host=localhost;dbname=NaN", 'root', 'root');
+
+    if(isset($_POST['mail']) && isset($_POST['password'])){
+        if(!empty($_POST['mail']) && !empty($_POST['password'])){
+            $req=$db->prepare("SELECT * FROM Visiteurs WHERE Mail = ? AND Password = ?");
+            $req->execute(array($_POST['mail'], $_POST['password']));
+
+            $usersHasBeenFound = $req->rowCount();
+            if($usersHasBeenFound){
+                $user = $req->fetch(PDO::FETCH_OBJ);
+
+                $_SESSION['ID'] = $user->ID;
+                $ID = $_SESSION['ID'];
+                $_SESSION['username'] = $user->Nom;
+                $_SESSION['name'] = $user->Nom;
+
+                $db->exec("UPDATE Visiteurs SET Connected = '1' WHERE ID = $ID");
+            }
+
+            if($usersHasBeenFound){
+                header('Location: loginsuccess.php');
+            }
+
+            else{
+                echo "Login Or Password Incorrecte";
+            }
+        }
+    }
 ?>
 
 <!DOCTYPE html>
@@ -32,9 +59,9 @@
                     <div class="divlogo">
                         <img src="../../Images/NaN.png" alt="NaN Logo" class="logo">
                     </div>
-                    <form action="../../NaN/index.php" method="POST">
-                        <label for="username">
-                            <input type="text" name="username" id="username" placeholder="Nom d'utilisateur"/>
+                    <form action="" method="POST">
+                        <label for="mail">
+                            <input type="email" name="mail" id="mail" placeholder="Email"/>
                             <br />
                         </label>
                                                         

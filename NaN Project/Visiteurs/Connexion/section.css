@@ -22,7 +22,7 @@ main{
     height: auto;
 }
 
-input[type="text"], input[type="password"]{
+input[type="text"], input[type="email"], input[type="password"]{
     margin: 0px 0px 20px 0px;
     padding: 0px 20px 0px 20px;
     width: 95%;

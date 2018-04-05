@@ -48,7 +48,7 @@ $conn->close();
 <body>
     <header>
         <div id="logo">
-            <h1><img src="../Images/NaN.png" alt="" title="" class="table-logo"/>NaN - Matières</h1>
+            <h1><img src="../Images/NaN.png" alt="" title="" class="table-logo"/><a href="../NaN/loginsuccess.php">NaN</a></h1>
         </div>
         <nav>
             <ul>

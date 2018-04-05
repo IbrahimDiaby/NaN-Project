@@ -21,11 +21,11 @@
 <body>
     <header>
         <div id="logo">
-            <h1><a href="../NaN/index.php"><img src="../Images/NaN.png" alt="" title="" class="table-logo"/>NaN - Matières</a></h1>
+            <h1><a href="../NaN/loginsuccess.php"><img src="../Images/NaN.png" alt="" title="" class="table-logo"/>NaN</a></h1>
         </div>
         <nav>
             <ul>
-                <a href="#"><li>Se Déconnecter <img src="#" alt="" class="" /></li></a>
+                <a href="../NaN/logout.php"><li>Se Déconnecter <img src="#" alt="" class="" /></li></a>
                 <a href="#"><li><img src="../Images/admin.png" alt="" class="admin" /></li></a>
                 <li><strong>#<?php echo $_COOKIE['username'] ?></strong> (Administrateur)</li>
                 <li>Vous etes connecté en tant que <img src="#" alt="" class="" /></li>

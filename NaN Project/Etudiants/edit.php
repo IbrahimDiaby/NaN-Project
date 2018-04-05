@@ -1,28 +1,24 @@
-<?php
-    if(!($_POST['name'] == "")){
-
-    $bdd = new PDO("mysql:host=localhost;dbname=NaN", 'root', 'root');
-    // $reponse = $bdd->query('SELECT * FROM Visiteurs');
-    $requete = $bdd->prepare('INSERT INTO Etudiants(Nom, Prenom, Age, Mail, Localisation, Activite, Groupe, Equipe)
-    VALUES(?, ?, ?, ?, ?, ?, ?, ?)');
+<?php 
+$bdd = new PDO("mysql:host=localhost;dbname=NaN", 'root', 'root');
+// $reponse = $bdd->query('SELECT * FROM Visiteurs');
+if(!($_POST['name'] == "") && !($_POST['surname'] == "")){
+    $requete = $bdd->prepare("UPDATE Etudiants SET Nom = ?, Prenom = ?, Age = ?, Mail = ?, Localisation = ?, Activite = ?, Groupe = ?, Equipe = ? WHERE ID = ?");
     $requete->execute(array(htmlspecialchars($_POST['name']), htmlspecialchars($_POST['surname']), htmlspecialchars($_POST['old']), htmlspecialchars($_POST['mail']), htmlspecialchars($_POST['locate']), htmlspecialchars($_POST['activity']), htmlspecialchars($_POST['group']), htmlspecialchars($_POST['equipe'])));
-    setcookie("username", $_POST['username'], time() + 3600*24*30);
-    $_COOKIE['username'] = $_POST['username'];
+}
 
-    $equipe= htmlspecialchars($_POST['equipe']);
+$equipe= htmlspecialchars($_POST['equipe']);
     if(isset ($equipe) && $equipe === "EquipeZ"){
-        $requete1 = $bdd->prepare('INSERT INTO EquipeZ(Membres, Mail, Age, Localisation, Groupe, Activite)
-        VALUES(?, ?, ?, ?, ?, ?)');
+        $requete1 = $bdd->prepare("UPDATE EquipeZ SET Membres = ?, Mail = ?, Age = ?, Localisation = ?, Groupe = ?, Activite = ? WHERE ID = ?");
         $requete1->execute(array(htmlspecialchars($_POST['name'] . " " . $_POST['surname']), htmlspecialchars($_POST['mail']), htmlspecialchars($_POST['old']), htmlspecialchars($_POST['locate']), htmlspecialchars($_POST['group']), htmlspecialchars($_POST['activity'])));
     }
     
     else if(isset ($equipe) && $equipe === "EquipeA"){
-        $requete2 = $bdd->prepare('INSERT INTO EquipeA(Membres, Mail, Age, Localisation, Groupe, Activite)
-        VALUES(?, ?, ?, ?, ?, ?)');
+        $requete2 = $bdd->prepare("UPDATE EquipeA SET Membres = ?, Mail = ?, Age = ?, Localisation = ?, Groupe = ?, Activite = ? WHERE ID = ?");
         $requete2->execute(array(htmlspecialchars($_POST['name'] . " " . $_POST['surname']), htmlspecialchars($_POST['mail']), htmlspecialchars($_POST['old']), htmlspecialchars($_POST['locate']), htmlspecialchars($_POST['group']), htmlspecialchars($_POST['activity'])));
     }
-}
 
+    // setcookie("username", $_POST['username'], time() + 3600*24*30);
+    // $_COOKIE['username'] = $_POST['username'];
 ?>
 
 <!DOCTYPE html>
@@ -31,10 +27,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="header.css" type="text/css" />
-    <link rel="stylesheet" href="section.css" type="text/css" />
-    <link rel="stylesheet" href="footer.css" type="text/css" />
-    <title>Créer Etudiants</title>
+    <link rel="stylesheet" href="editheader.css" type="text/css" />
+    <link rel="stylesheet" href="editsection.css" type="text/css" />
+    <link rel="stylesheet" href="editfooter.css" type="text/css" />
+    <script src="edit.js"></script>
+    <title>Modifier Etudiants</title>
 </head>
 <body>
     <header>
@@ -44,8 +41,8 @@
         <nav>
             <ul>
                 <a href="logout.php"><li>Se Déconnecter <img src="#" alt="" class="" /></li></a>
-                <a href="#"><li><img src="../Images/admin.png" alt="" class="admin" /></li></a>
-                <a href="#"><li><strong>#<?php echo $_COOKIE['username'] ?></strong> (Administrateur)</li></a>
+                <li><img src="../Images/admin.png" alt="" class="admin" /></li>
+                <a href="#"><li><strong>#<?php echo $_SESSION['username'] ?></strong> (Administrateur)</li></a>
                 <a href="#"><li>Vous etes connecté en tant que <img src="#" alt="" class="" /></li></a>
             </ul>
         </nav>
@@ -58,7 +55,12 @@
             </div>
         </div>
         <div class="contain">
-            <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST">
+        <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST">
+            
+                <label for="id">
+                    ID: <br /><input type="text" name="id" id="id" required /><br />
+                </label>
+
                 <label for="name">
                     Nom: <br /><input type="text" name="name" id="name" required /><br />
                 </label>

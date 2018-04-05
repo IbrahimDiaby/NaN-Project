@@ -9,7 +9,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>NaN Gestion</title>
+    <title>NaN</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Serif" rel="stylesheet"> -->
     <link rel="stylesheet" type="text/css" media="screen" href="loginsuccessheader.css" />
@@ -23,7 +23,7 @@
         <nav>
             <nav class="logo"><img src="../Images/NaN.png" alt="logo" class="Logo" title="Not A Number CI" /></nav>
             <nav class="textoflogo"><p>NaN Gestion</p></nav>
-            <nav class="Admin"><p>Plateforme Admin <img src="../Images/form.png" alt="" class="form" title="NaN Gestion" /></p></nav>
+            <nav class="Admin"><p>Plateforme Visiteurs <img src="../Images/form.png" alt="" class="form" title="NaN Gestion" /></p></nav>
             <nav class="search-bar"><input type="text" alt="search-tool" class="search-tool" title="Recherche" placeholder="Rechercher"/></nav>
             <nav class="searchlogo"><img src="../Images/search.png" alt="search" class="search" title="Recherche" /></nav>
             <nav class="logo"><img src="../Images/NaN.png" alt="logo" class="Logo" title="Not A Number CI" /></nav>
@@ -37,46 +37,17 @@
                     Vous etes connecté en tant que : 
                 </li>
                 
-                <li><a href="#">#<?php echo $_SESSION['username'] ?><img src="../Images/form.png" alt="" class="imgSudo_Su" title="Administrateur" /></a>
-                    <ul>
-                        <li><a href="Createindex.php">Créez un Semi Admin</a></li>
-                        <li><a href="edit.php">Modifiez les informations</a></li>
-                        <li><a href="delete.php">Supprimer</a></li>
-                    </ul>
-                </li>
+                <li>#<?php echo $_SESSION['username'] ?><img src="../Images/form.png" alt="" class="imgSudo_Su" title="Administrateur" /></li>
 
-                <li><a href="../Etudiants/index.php">Etudiants <img src="../Images/students.png" alt="" class="students" title="Etudiants" /></a>
-                    <ul>
-                        <li><a href="../Etudiants/index.php">Créez</a></li>
-                        <li><a href="../Etudiants/edit.php">Modifiez les informations</a></li>
-                        <li><a href="../Etudiants/delete.php">Supprimer</a></li>
-                    </ul>
-                </li>
+                <li><a href="#">Etudiants <img src="../Images/students.png" alt="" class="students" title="Etudiants" /></a></li>
 
-                <li><a href="../Equipes/index.php">Equipes <img src="../Images/users.png" alt="" class="users" title="Equipes" /></a>
-                    <ul>
-                        <li><a href="../CreateEquipes/index.php">Créez <img src="../Images/info.png" alt="" class="info" title="Equipe Z Info" /></a></li>
-                        <li><a href="#">Ajoutez un étudiant <img src="../Images/info.png" alt="" class="info" title="Equipe A Info" /></a></li>
-                        <li><a href="#">Supprimer</a></li>
-                    </ul>
-                </li>
+                <li><a href="#">Equipes <img src="../Images/users.png" alt="" class="users" title="Equipes" /></a></li>
 
-                <li><a href="#">Equipes Existantes <img src="../Images/users.png" alt="" class="users" title="Equipes" /></a>
-                    <ul>
-                        <li><a href="../Info/index.php">Equipe Z <img src="../Images/info.png" alt="" class="info" title="Equipe Z Info" /></a></li>
-                        <li><a href="../Info/index.php">Equipes A <img src="../Images/info.png" alt="" class="info" title="Equipe A Info" /></a></li>
-                    </ul>
-                </li>
+                <li><a href="#">Equipes Existantes <img src="../Images/users.png" alt="" class="users" title="Equipes" /></a></li>
 
-                <li><a href="../Groupes/index.php">Groupes <img src="../Images/group.png" alt="" class="group" title="Equipes" /></a>
-                    <ul>
-                        <li><a href="../Groupes/index.php">Créez</a></li>
-                        <li><a href="#">Modifiez les informations</a></li>
-                        <li><a href="#">Supprimer</a></li>
-                    </ul>
-                </li>
+                <li><a href="#">Groupes <img src="../Images/group.png" alt="" class="group" title="Equipes" /></a></li>
 
-                <li><a href="../Matieres/index.php">Paramètres <img src="../Images/parameter.png" alt="" class="parameters" title="Paramètres" /></a>
+                <li><a href="#">Paramètres <img src="../Images/parameter.png" alt="" class="parameters" title="Paramètres" /></a>
                     <ul>
                         <li><a href="#">Quizz</a></li>
                         <li><a href="#">Projets</a></li>
@@ -181,10 +152,10 @@
 
         <div class="social">
                 <ul>
-                    <li><a href="#" target="_blank"><img src="../Images/facebook.svg" alt="facebook" title="Facebook" class="facebook"/></li></a>
-                    <li><a href="#" target="_blank"><img src="../Images/discord.svg" alt="discord" title="Discord" class="discord"/></li></a>
-                    <li><a href="#" target="_blank"><img src="../Images/blog.svg" alt="blog" title="Blog" class="blog"/></li></a>
-                    <li><a href="#" target="_blank"><img src="../Images/github.svg" alt="github" title="Github" class="github"/></li></a>
+                    <li><a href="#"><img src="../Images/facebook.svg" alt="facebook" title="Facebook" class="facebook"/></li></a>
+                    <li><a href="#"><img src="../Images/discord.svg" alt="discord" title="Discord" class="discord"/></li></a>
+                    <li><a href="#"><img src="../Images/blog.svg" alt="blog" title="Blog" class="blog"/></li></a>
+                    <li><a href="#"><img src="../Images/github.svg" alt="github" title="Github" class="github"/></li></a>
                 </ul>
         </div>
     </section>

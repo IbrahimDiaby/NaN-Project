@@ -33,11 +33,11 @@
 <body>
     <header>
         <div id="logo">
-            <h1><img src="../Images/NaN.png" alt="" title="" class="table-logo"/><a href="../NaN/index.php">NaN - Matières</a></h1>
+            <h1><img src="../Images/NaN.png" alt="" title="" class="table-logo"/><a href="../NaN/loginsuccess.php">NaN</a></h1>
         </div>
         <nav>
             <ul>
-                <a href="#"><li>Se Déconnecter <img src="#" alt="" class="" /></li></a>
+                <a href="../NaN/logout.php"><li>Se Déconnecter <img src="#" alt="" class="" /></li></a>
                 <li><img src="../Images/admin.png" alt="" class="admin" /></li>
                 <li><strong>#<?php $_COOKIE['name'] ?></strong> (Administrateur)</li>
                 <li>Vous etes connecté en tant que <img src="#" alt="" class="" /></li>
@@ -86,7 +86,7 @@
     <table>
             <tr>
                 <th class="column">ID</th>
-                <th>Nom & Prénoms</th>
+                <th>Nom &amp; Prénoms</th>
                 <th class="column">Age</th>
                 <th>Activité</th>
                 <th class="column">Groupe</th>

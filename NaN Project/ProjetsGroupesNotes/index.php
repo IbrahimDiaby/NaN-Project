@@ -1,16 +1,12 @@
 <?php 
-    $bdd = new PDO("mysql:host=localhost;dbname=NaN", 'root', 'root');
-    // $reponse = $bdd->query('SELECT * FROM Visiteurs');
-
-    if(isset($_POST['group'])){
-        $requete = $bdd->prepare('INSERT INTO Groupes(Nom, Equipe) VALUES(?, ?)');
-        $requete->execute(array(htmlspecialchars($_POST['group']), htmlspecialchars($_POST['equipe'])));
+    if(!($_POST['group'] == "")){
+        $bdd = new PDO('mysql:host=localhost;dbname=NaN;', 'root', 'root');
+        $requete = $bdd->prepare('INSERT INTO ProjetsNotesGroupe(Groupe, Matieres, Notes, Commentaires) VALUES(?, ?, ?, ?)');
+        $requete->execute(array(htmlspecialchars($_POST['group']), htmlspecialchars($_POST['matieres']), htmlspecialchars($_POST['mark']), htmlspecialchars($_POST['comment'])));
     }
     
-
     // setcookie("username", $_POST['username'], time() + 3600*24*30);
     // $_COOKIE['username'] = $_POST['username'];
-
 ?>
 
 <!DOCTYPE html>
@@ -22,7 +18,7 @@
     <link rel="stylesheet" href="header.css" type="text/css" />
     <link rel="stylesheet" href="section.css" type="text/css" />
     <link rel="stylesheet" href="footer.css" type="text/css" />
-    <title>Création De Groupes</title>
+    <title>Notes Projets De Groupes</title>
 </head>
 <body>
     <header>
@@ -44,25 +40,28 @@
             <div class="divlogo">
                 <img src="../Images/NaN.png" alt="" class="logo">
             </div>
-        </div><br />
+        </div>
+        <br />
         <div class="contain">
-            <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST">
-
-            <label for="title">
-                    <h1 class="subject_title">Création de nouveau groupe<img src="../Images/creategroup.png" alt="" class="creategroup"></h1>
-            </label>
+            <form action="<?php echo $_SERVER['PHP_SELF']?>" method="POST">
                 <label for="group">
-                        Nom du groupe : <br /><input type="text" name="group" id="group" required /><br />
+                    Groupe: <br /><input type="text" name="group" id="group" required /><br />
+                </label>
+                
+                <label for="matieres">
+                    Matières: <br /><input type="text" name="matieres" id="matieres" required /><br />
                 </label>
 
-                <label for="equipe">
-                        Equipes: <br /><select name="equipe" id="equipe">
-                            <option>Equipe Z</option>
-                            <option>Equipe A</option>
-                        </select><br />
+                <label for="mark">
+                    Notes: <br /><input type="text" name="mark" id="mark" required /><br />
                 </label>
+
+                 <label for="comment">
+                    Appréciation: <br /><input type="text" name="comment" id="comment" required /><br />
+                </label>
+
                 <label for="submit">
-                    <input type="submit" value="Confirmer">
+                    <input type="submit" name="submit" id="submit" value="Confirmer" />
                 </label>
             </form>
         </div>

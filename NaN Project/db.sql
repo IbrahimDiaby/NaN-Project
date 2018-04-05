@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost
--- Généré le :  lun. 02 avr. 2018 à 17:20
+-- Généré le :  jeu. 05 avr. 2018 à 00:16
 -- Version du serveur :  5.6.38
 -- Version de PHP :  7.2.1
 
@@ -91,7 +91,7 @@ CREATE TABLE `EquipeZ` (
 
 CREATE TABLE `Etudiants` (
   `ID` int(11) NOT NULL,
-  `Nom` varchar(255) NOT NULL,
+  `Nom` varchar(225) NOT NULL,
   `Prenom` varchar(255) NOT NULL,
   `Mail` varchar(255) NOT NULL,
   `Age` int(11) NOT NULL,
@@ -183,6 +183,71 @@ CREATE TABLE `LikeGroupes` (
 -- --------------------------------------------------------
 
 --
+-- Structure de la table `Modules`
+--
+
+CREATE TABLE `Modules` (
+  `ID` int(11) NOT NULL,
+  `Module` varchar(255) NOT NULL,
+  `DateAjoute` datetime NOT NULL,
+  `DateFin` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `Projets`
+--
+
+CREATE TABLE `Projets` (
+  `ID` int(11) NOT NULL,
+  `Nom` varchar(255) NOT NULL,
+  `DateAjoute` datetime NOT NULL,
+  `DateFin` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `ProjetsNotesEtudiants`
+--
+
+CREATE TABLE `ProjetsNotesEtudiants` (
+  `ID` int(11) NOT NULL,
+  `Etudiant` varchar(255) NOT NULL,
+  `Notes` int(11) NOT NULL,
+  `Commentaires` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `ProjetsNotesGroupe`
+--
+
+CREATE TABLE `ProjetsNotesGroupe` (
+  `ID` int(11) NOT NULL,
+  `Groupe` varchar(255) NOT NULL,
+  `Notes` int(11) NOT NULL,
+  `Commentaires` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `quiz`
+--
+
+CREATE TABLE `quiz` (
+  `ID` int(11) NOT NULL,
+  `Nom` varchar(255) NOT NULL,
+  `DateAjoute` datetime NOT NULL,
+  `DateFin` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
 -- Structure de la table `SemiSudo`
 --
 
@@ -190,7 +255,8 @@ CREATE TABLE `SemiSudo` (
   `ID` int(11) NOT NULL,
   `Nom` varchar(255) NOT NULL,
   `Mail` varchar(255) NOT NULL,
-  `Passwords` varchar(255) NOT NULL
+  `Passwords` varchar(255) NOT NULL,
+  `Connected` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -202,15 +268,16 @@ CREATE TABLE `SemiSudo` (
 CREATE TABLE `Sudo` (
   `ID` int(11) NOT NULL,
   `Nom` varchar(255) NOT NULL,
-  `Password` varchar(255) NOT NULL
+  `Passwords` varchar(255) NOT NULL,
+  `Connected` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `Sudo`
 --
 
-INSERT INTO `Sudo` (`ID`, `Nom`, `Password`) VALUES
-(1, 'NaN Root', '#NaNroot2018');
+INSERT INTO `Sudo` (`ID`, `Nom`, `Passwords`, `Connected`) VALUES
+(1, 'Rabby', '#rootNaN2018', 1);
 
 -- --------------------------------------------------------
 
@@ -225,7 +292,8 @@ CREATE TABLE `Visiteurs` (
   `Mail` varchar(255) NOT NULL,
   `Password` varchar(255) NOT NULL,
   `Activite` varchar(255) NOT NULL,
-  `Localisation` varchar(255) NOT NULL
+  `Localisation` varchar(255) NOT NULL,
+  `Connected` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -266,7 +334,7 @@ ALTER TABLE `EquipeZ`
 -- Index pour la table `Etudiants`
 --
 ALTER TABLE `Etudiants`
-  ADD KEY `ID` (`ID`) USING BTREE;
+  ADD PRIMARY KEY (`ID`);
 
 --
 -- Index pour la table `EtudiantsNotes`
@@ -303,6 +371,36 @@ ALTER TABLE `LikeEtudiants`
 --
 ALTER TABLE `LikeGroupes`
   ADD PRIMARY KEY (`Like`);
+
+--
+-- Index pour la table `Modules`
+--
+ALTER TABLE `Modules`
+  ADD PRIMARY KEY (`ID`);
+
+--
+-- Index pour la table `Projets`
+--
+ALTER TABLE `Projets`
+  ADD PRIMARY KEY (`ID`);
+
+--
+-- Index pour la table `ProjetsNotesEtudiants`
+--
+ALTER TABLE `ProjetsNotesEtudiants`
+  ADD PRIMARY KEY (`ID`);
+
+--
+-- Index pour la table `ProjetsNotesGroupe`
+--
+ALTER TABLE `ProjetsNotesGroupe`
+  ADD PRIMARY KEY (`ID`);
+
+--
+-- Index pour la table `quiz`
+--
+ALTER TABLE `quiz`
+  ADD PRIMARY KEY (`ID`);
 
 --
 -- Index pour la table `SemiSudo`
@@ -399,6 +497,36 @@ ALTER TABLE `LikeGroupes`
   MODIFY `Like` int(11) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT pour la table `Modules`
+--
+ALTER TABLE `Modules`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT pour la table `Projets`
+--
+ALTER TABLE `Projets`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT pour la table `ProjetsNotesEtudiants`
+--
+ALTER TABLE `ProjetsNotesEtudiants`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT pour la table `ProjetsNotesGroupe`
+--
+ALTER TABLE `ProjetsNotesGroupe`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT pour la table `quiz`
+--
+ALTER TABLE `quiz`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT pour la table `SemiSudo`
 --
 ALTER TABLE `SemiSudo`
@@ -414,4 +542,4 @@ ALTER TABLE `Sudo`
 -- AUTO_INCREMENT pour la table `Visiteurs`
 --
 ALTER TABLE `Visiteurs`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;

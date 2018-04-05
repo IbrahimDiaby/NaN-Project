@@ -40,7 +40,7 @@
             <?php
                 while($liste = $requete->fetch()){
             ?>
-            <p><strong>#<?php echo $_COOKIE['username'] ?></strong> Au Sujet De L'Étudiant : <strong><?php echo $liste['Etudiants'] ?></strong> : <strong><?php echo $liste['Commentaires'] ?></strong></p>
+            <p><strong>#<?php echo $_COOKIE['username'] ?></strong> Au Sujet De L'Étudiant => <strong><?php echo $liste['Etudiants'] ?></strong> : <strong><?php echo $liste['Commentaires'] ?></strong></p>
             <?php
                 }
             ?>

@@ -181,10 +181,10 @@
 
         <div class="social">
                 <ul>
-                    <li><a href="#"><img src="../Images/facebook.svg" alt="facebook" title="Facebook" class="facebook"/></li></a>
-                    <li><a href="#"><img src="../Images/discord.svg" alt="discord" title="Discord" class="discord"/></li></a>
-                    <li><a href="#"><img src="../Images/blog.svg" alt="blog" title="Blog" class="blog"/></li></a>
-                    <li><a href="#"><img src="../Images/github.svg" alt="github" title="Github" class="github"/></li></a>
+                    <li><a href="#" target="_blank"><img src="../Images/facebook.svg" alt="facebook" title="Facebook" class="facebook"/></li></a>
+                    <li><a href="#" target="_blank"><img src="../Images/discord.svg" alt="discord" title="Discord" class="discord"/></li></a>
+                    <li><a href="#" target="_blank"><img src="../Images/blog.svg" alt="blog" title="Blog" class="blog"/></li></a>
+                    <li><a href="#" target="_blank"><img src="../Images/github.svg" alt="github" title="Github" class="github"/></li></a>
                 </ul>
         </div>
     </section>

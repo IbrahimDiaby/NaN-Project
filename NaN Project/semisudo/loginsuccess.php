@@ -39,22 +39,11 @@
                 
                 <li>#<?php echo $_SESSION['username'] ?><img src="../Images/form.png" alt="" class="imgSudo_Su" title="Administrateur" /></li>
 
-                <li><a href="#">Etudiants <img src="../Images/students.png" alt="" class="students" title="Etudiants" /></a></li>
+                <li><a href="Etudiants/index.php">Etudiants <img src="../Images/students.png" alt="" class="students" title="Etudiants" /></a></li>
 
-                <li><a href="#">Equipes <img src="../Images/users.png" alt="" class="users" title="Equipes" /></a></li>
+                <li><a href="CreateEquipes/index.php">Equipes <img src="../Images/users.png" alt="" class="users" title="Equipes" /></a></li>
 
-                <li><a href="#">Equipes Existantes <img src="../Images/users.png" alt="" class="users" title="Equipes" /></a></li>
-
-                <li><a href="#">Groupes <img src="../Images/group.png" alt="" class="group" title="Equipes" /></a></li>
-
-                <li><a href="#">Paramètres <img src="../Images/parameter.png" alt="" class="parameters" title="Paramètres" /></a>
-                    <ul>
-                        <li><a href="#">Quizz</a></li>
-                        <li><a href="#">Projets</a></li>
-                        <li><a href="#">Matières</a></li>
-                        <li><a href="#">Localisation <img src="../Images/locate.png" alt="" class="located" title="Localisation" /></a></li>
-                    </ul>
-                </li>
+                <li><a href="Groupes/index.php">Groupes <img src="../Images/group.png" alt="" class="group" title="Equipes" /></a></li>
 
                 <li><a href="logout.php">Déconnexion <img src="../Images/logout.png" alt="" class="logout" title="Logout" /></a></li>
 

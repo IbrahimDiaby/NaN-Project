@@ -53,15 +53,22 @@
                     </ul>
                 </li>
 
-                <li><a href="../Equipes/index.php">Equipes <img src="../Images/users.png" alt="" class="users" title="Equipes" /></a>
+                <li><a href="#">Notes <img src="../Images/students.png" alt="" class="students" title="Etudiants" /></a>
                     <ul>
-                        <li><a href="../CreateEquipes/index.php">Créez <img src="../Images/info.png" alt="" class="info" title="Equipe Z Info" /></a></li>
-                        <li><a href="#">Ajoutez un étudiant <img src="../Images/info.png" alt="" class="info" title="Equipe A Info" /></a></li>
-                        <li><a href="#">Supprimer</a></li>
+                        <li><a href="../ProjetsNotesEtudiants/index.php">Notes Projets Etudiants</a></li>
+                        <li><a href="../ProjetsNotesGroupes/index.php">Notes Projets Groupes</a></li>
+                        <li><a href="../BonusMalus/index.php">Bonus/Malus</a></li>
                     </ul>
                 </li>
 
-                <li><a href="#">Equipes Existantes <img src="../Images/users.png" alt="" class="users" title="Equipes" /></a>
+                <li><a href="../Equipes/index.php">Equipes <img src="../Images/users.png" alt="" class="users" title="Equipes" /></a>
+                    <ul>
+                        <li><a href="../CreateEquipes/index.php">Créez <img src="../Images/info.png" alt="" class="info" title="Equipe Z Info" /></a></li>
+                        <li><a href="../Etudiants/index.php">Ajoutez un étudiant <img src="../Images/info.png" alt="" class="info" title="Equipe A Info" /></a></li>
+                    </ul>
+                </li>
+
+                <li><a href="../Info/index.php">Equipes Existantes <img src="../Images/users.png" alt="" class="users" title="Equipes" /></a>
                     <ul>
                         <li><a href="../Info/index.php">Equipe Z <img src="../Images/info.png" alt="" class="info" title="Equipe Z Info" /></a></li>
                         <li><a href="../Info/index.php">Equipes A <img src="../Images/info.png" alt="" class="info" title="Equipe A Info" /></a></li>
@@ -71,17 +78,17 @@
                 <li><a href="../Groupes/index.php">Groupes <img src="../Images/group.png" alt="" class="group" title="Equipes" /></a>
                     <ul>
                         <li><a href="../Groupes/index.php">Créez</a></li>
-                        <li><a href="#">Modifiez les informations</a></li>
-                        <li><a href="#">Supprimer</a></li>
+                        <li><a href="../Groupes/edit.php">Basculer Un Groupe Dans Une Autre Equipe</a></li>
+                        <li><a href="../Groupes/delete.php">Supprimer</a></li>
                     </ul>
                 </li>
 
                 <li><a href="../Matieres/index.php">Paramètres <img src="../Images/parameter.png" alt="" class="parameters" title="Paramètres" /></a>
                     <ul>
-                        <li><a href="#">Quizz</a></li>
-                        <li><a href="#">Projets</a></li>
-                        <li><a href="#">Matières</a></li>
-                        <li><a href="#">Localisation <img src="../Images/locate.png" alt="" class="located" title="Localisation" /></a></li>
+                        <li><a href="../Matieres/index.php">Quizz</a></li>
+                        <li><a href="../Matieres/index.php">Projets</a></li>
+                        <li><a href="../Matieres/index.php">Matières</a></li>
+                        <li><a href="../Matieres/index.php">Localisation <img src="../Images/locate.png" alt="" class="located" title="Localisation" /></a></li>
                     </ul>
                 </li>
 

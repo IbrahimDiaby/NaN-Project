@@ -1,0 +1,69 @@
+section{
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: auto;
+}
+
+article{
+    margin: 0px auto;
+    padding: 0px;
+    width: 80%;
+    height: auto;
+}
+
+label{
+    margin: 10px 0px 0px 0px;
+    font-size: 25px;
+    font-weight: bold;
+    width: 95%;
+}
+
+input[type="text"]{
+    margin: 10px auto;
+    padding: 5px 0px 5px 0px;
+    width: 95%;
+    height: 40px;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+textarea{
+    margin: 10px auto;
+    padding: 10px 0px 5px 0px;
+    width: 95%;
+    height: 40px;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+input[type="submit"]{
+    margin: 10px 0px 0px 0px;
+    padding: 5px 0px 5px 0px;
+    width: 95%;
+    height: 60px;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+input[type="submit"]:hover{
+    background-color: greenyellow;
+    text-transform: uppercase;
+}
+
+.commentaire{
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: auto;
+}
+
+.commentaire p{
+    text-align: center;
+}

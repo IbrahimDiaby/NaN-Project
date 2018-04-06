@@ -1,0 +1,131 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: auto;
+}
+
+section{
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+
+.left-aside{
+    margin: 0px;
+    padding: 0px;
+    width: 20%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.presentation{
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: auto;
+}
+
+.presentation h1{
+    text-align: center;
+}
+
+.containimg{
+    margin: 0px auto;
+    padding: 0px;
+    width: 65%;
+    height: 200px;
+}
+
+.img{
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: inherit;
+}
+
+.name{
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: auto;
+}
+
+.name p{
+    margin: 10px 0px 0px 0px;
+    padding: 0px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.pages{
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: auto;
+}
+
+.pages > nav > h2{
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+}
+
+nav{
+    margin: 0px auto;
+    padding: 0px;
+    width: 85%;
+    height: 64px;
+}
+
+nav ul{
+    margin: 0px;
+    padding: 0px;
+}
+
+nav ul li{
+    list-style-type: none;
+    float: left;
+}
+
+.facebook, .discord, .blog, .github, .twitter, .linkedin, .youtube, .gmail, .like, .dislike{
+    width: 60px;
+    height: 60px;
+}
+
+nav ul > li{
+    margin: 0px 10px 0px 10px;
+    padding: 0px;
+}
+
+.right-aside{
+    margin: 0px;
+    padding: 0px;
+    width: 80%;
+    height: auto;
+    border-left: 2px dashed rgba(153,117,253,1);
+}
+
+.top{
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 50%;
+}
+
+.bottom{
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 50%;
+}
+
+.bottom h1, .top h1{
+    margin: 10px 0px 0px 10px;
+    padding: 0px;
+    text-decoration: underline;
+    text-transform: uppercase;
+}

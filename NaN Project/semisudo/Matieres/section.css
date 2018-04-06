@@ -1,0 +1,170 @@
+section{
+    margin: 0px;
+    padding: 0px;
+    height: auto;
+    width: 100%;
+    display: flex;
+}
+
+.team > a:hover{
+    color: rgba(153,117,253,1);
+}
+
+.aside-left{
+    margin: 0px;
+    padding: 0px;
+    height: 730px;
+    width: 17%;
+    background-color: rgba(000,000,000,0.9);
+}
+
+.aside-left ul{
+    margin: 0px;
+    padding: 0px;
+}
+
+.aside-left ul li{
+    list-style-type: none;
+    color: #fff;
+    height: 40px;
+    padding: 10px 0px 0px 10px;
+    font-size: 19px;
+}
+
+.aside-left a{
+    text-decoration: none;
+}
+
+.table-logo{
+    margin: 5px 10px 0px 0px;
+    height: 19px;
+    width: 19px;
+}
+
+.firstmodule-logo{
+    margin: 5px 10px 0px 0px;
+    height: 19px;
+    width: 19px;
+}
+
+.send-logo, .project-logo, .comment-logo, .quiz-logo, .module-logo, .map-logo{
+    margin: 0px 0px 5px 10px;
+    padding: 0px;
+    height: 35px;
+    width: 35px;
+    vertical-align: middle;
+}
+
+.view-logo{
+    margin: 5px 10px 0px 0px;
+    height: 19px;
+    width: 19px;
+}
+
+.set-logo{
+    margin: 5px 10px 0px 0px;
+    height: 19px;
+    width: 19px;
+}
+
+.table:hover{
+    background-color: blue;
+}
+
+.module:hover{
+    background-color: peru;
+}
+
+.view:hover{
+    background-color: yellowgreen;
+}
+
+.set:hover{
+    background-color: aqua;
+}
+
+.aside-right{
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+    width: 83%;
+}
+
+#subject{
+    margin: 0px;
+    padding: 10px 0px 0px 0px;
+    background-color: rgba(000,000,000,0.1);
+    width: 100%;
+    height: 50px;
+}
+
+#subject p{
+    margin: 0px;
+    padding: 0px;
+    height: 35px;
+    font-size: 35px;
+    vertical-align: center;
+    font-weight: bold;
+}
+
+.subject-logo{
+    margin: 0px 10px 0px 10px;
+    padding: 0px;
+    height: 30px;
+    width: 30px;
+    vertical-align: center;
+}
+
+.main1{
+    margin: 0px auto;
+    padding: 0px;
+    width: 95%;
+    height: 100%;
+}
+
+.container{
+    margin: 10px 20px 10px 0px;
+    padding: 0px;
+    width: 350px;
+    height: 250px;
+    border: 1px solid rgba(000,000,000,0.9);
+    float: left;
+}
+
+.title{
+    margin: 0px;
+    padding: 15px 0px 0px 0px;
+    height: 50px;
+    width: 100%;
+    background-color: rgba(000,000,000,0.9);
+}
+
+.title h1{
+    margin: 0px 0px 0px 10px;
+    padding: 0px;
+    font-size: 30px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.contain{
+    width: 100%;
+    height: 185px;
+}
+
+.contain p{
+    margin: 0px 0px 0px 15px;
+    padding: 0px;
+    font-weight: bold;
+}
+
+.contain h1{
+    margin: 18px 0px 18px 15px;
+    padding: 0px;
+    font-weight: bold;
+}
+
+.contain a{
+    text-decoration: none;
+    color: #000000;
+}

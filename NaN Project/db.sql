@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost
--- Généré le :  jeu. 05 avr. 2018 à 00:16
+-- Généré le :  ven. 06 avr. 2018 à 22:54
 -- Version du serveur :  5.6.38
 -- Version de PHP :  7.2.1
 
@@ -215,6 +215,7 @@ CREATE TABLE `Projets` (
 CREATE TABLE `ProjetsNotesEtudiants` (
   `ID` int(11) NOT NULL,
   `Etudiant` varchar(255) NOT NULL,
+  `Matieres` varchar(255) NOT NULL,
   `Notes` int(11) NOT NULL,
   `Commentaires` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -228,6 +229,7 @@ CREATE TABLE `ProjetsNotesEtudiants` (
 CREATE TABLE `ProjetsNotesGroupe` (
   `ID` int(11) NOT NULL,
   `Groupe` varchar(255) NOT NULL,
+  `Matieres` varchar(255) NOT NULL,
   `Notes` int(11) NOT NULL,
   `Commentaires` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -255,7 +257,7 @@ CREATE TABLE `SemiSudo` (
   `ID` int(11) NOT NULL,
   `Nom` varchar(255) NOT NULL,
   `Mail` varchar(255) NOT NULL,
-  `Passwords` varchar(255) NOT NULL,
+  `Password` varchar(255) NOT NULL,
   `Connected` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -542,4 +544,4 @@ ALTER TABLE `Sudo`
 -- AUTO_INCREMENT pour la table `Visiteurs`
 --
 ALTER TABLE `Visiteurs`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;

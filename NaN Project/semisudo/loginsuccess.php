@@ -41,11 +41,19 @@
 
                 <li><a href="Etudiants/index.php">Etudiants <img src="../Images/students.png" alt="" class="students" title="Etudiants" /></a></li>
 
+                <li><a href="#">Notes <img src="../Images/students.png" alt="" class="students" title="Etudiants" /></a>
+                    <ul>
+                        <li><a href="../ProjetsNotesEtudiants/index.php">Notes Projets Etudiants</a></li>
+                        <li><a href="../ProjetsNotesGroupes/index.php">Notes Projets Groupes</a></li>
+                        <li><a href="../BonusMalus/index.php">Bonus/Malus</a></li>
+                    </ul>
+                </li>
+
                 <li><a href="CreateEquipes/index.php">Equipes <img src="../Images/users.png" alt="" class="users" title="Equipes" /></a></li>
 
                 <li><a href="Groupes/index.php">Groupes <img src="../Images/group.png" alt="" class="group" title="Equipes" /></a></li>
 
-                <li><a href="logout.php">Déconnexion <img src="../Images/logout.png" alt="" class="logout" title="Logout" /></a></li>
+                <li><a href="../logout.php">Déconnexion <img src="../Images/logout.png" alt="" class="logout" title="Logout" /></a></li>
 
             </ul>
         </nav>

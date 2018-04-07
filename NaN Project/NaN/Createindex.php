@@ -2,7 +2,7 @@
 $bdd = new PDO("mysql:host=localhost;dbname=NaN", 'root', 'root');
 // $reponse = $bdd->query('SELECT * FROM Visiteurs');
 if(!($_POST['name'] == "") && !($_POST['surname'] == "")){
-    $requete = $bdd->prepare('INSERT INTO SemiSudo(Nom, Mail, Passwords) VALUES(?, ?, ?)');
+    $requete = $bdd->prepare('INSERT INTO SemiSudo(Nom, Mail, Password) VALUES(?, ?, ?)');
     $requete->execute(array(htmlspecialchars($_POST['name'] . " " . $_POST['surname']), htmlspecialchars($_POST['mail']), htmlspecialchars($_POST['password'])));
 }
 

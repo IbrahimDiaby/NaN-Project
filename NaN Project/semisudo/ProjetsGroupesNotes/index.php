@@ -27,7 +27,7 @@
         </div>
         <nav>
             <ul>
-                <a href="#"><li>Se Déconnecter <img src="#" alt="" class="" /></li></a>
+                <a href="../logout.php"><li>Se Déconnecter <img src="#" alt="" class="" /></li></a>
                 <a href="#"><li><img src="../Images/admin.png" alt="" class="admin" /></li></a>
                 <a href="#"><li><strong>#<?php echo $_COOKIE['username'] ?></strong> (Administrateur)</li></a>
                 <a href="#"><li>Vous etes connecté en tant que <img src="#" alt="" class="" /></li></a>

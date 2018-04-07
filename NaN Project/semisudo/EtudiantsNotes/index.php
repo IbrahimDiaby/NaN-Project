@@ -2,8 +2,8 @@
 
     if(!($_POST['name']) == ""){
         $bdd = new PDO('mysql:host=localhost;dbname=NaN', 'root', 'root');
-        $send = $bdd->prepare('INSERT INTO EtudiantsNotes(Nom, Prenom, Matieres, Notes) VALUES(?,?,?,?)');
-        $send->execute(array(htmlspecialchars($_POST['name']), htmlspecialchars($_POST['surname']), htmlspecialchars($_POST['matieres']), htmlspecialchars($_POST['mark'])));
+        $send = $bdd->prepare('INSERT INTO EtudiantsNotes(Nom, Prenom, Notes, Matieres, Commentaires) VALUES(?, ?, ?, ?, ?)');
+        $send->execute(array(htmlspecialchars($_POST['name']), htmlspecialchars($_POST['surname']), htmlspecialchars($_POST['mark']), htmlspecialchars($_POST['matieres']), htmlspecialchars($_POST['commentaire'])));
     }
     
     
@@ -25,7 +25,7 @@
 <body>
     <header>
         <div id="logo">
-            <h1><img src="../Images/NaN.png" alt="" title="" class="table-logo"/>NaN - Matières</h1>
+            <h1><a href="../NaN/loginsuccess.php"><img src="../Images/NaN.png" alt="" title="" class="table-logo"/>NaN</a></h1>
         </div>
         <nav>
             <ul>
@@ -56,13 +56,15 @@
                 <label for="matieres">
                     Matières: <br /><input type="text" name="matieres" id="matieres" required /><br />
                 </label>
+                
                 <label for="mark">
-                    Notes:  <br />
-                        <select id="mark" name="mark" >
-                            <option value="0">0</option>
-                            <option value="100">100</option>
-                        </select>
-                    <br />
+                    Notes:  <br /><input type="text" name="mark" id="mark" required /><br />
+                </label>
+
+                <label for="commentaire">
+                    Appréciation: <br />
+                        <textarea name="commentaire" id="commentaire" placeholder="Commentaire" required></textarea>
+                        <br />
                 </label>
                 <label for="submit">
                     <input type="submit" name="submit" id="submit" value="Confirmer" />
@@ -70,7 +72,6 @@
             </form>
         </div>
     </section>  
-
 
     <footer>
         <p>Copyright © NaN CI - Tous droits réservés</p>

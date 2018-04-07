@@ -6,6 +6,22 @@ if(!($_POST['group'] == "")){
     $requete->execute(array(htmlspecialchars($_POST['group'])));
 }
 
+if(!($_POST['group'] == "") && !($_POST['equipe'] == "")){
+    $equipe= htmlspecialchars($_POST['equipe']);
+
+    if(isset($equipe) && $equipe == "EquipeZ"){
+        $requetedelete1 = $bdd->prepare("DELETE FROM EquipeZ WHERE Nom = ?");
+        $requetedelete1->execute(array(htmlspecialchars($_POST['group'])));
+    }
+    
+    else if(isset($equipe) && $equipe == "EquipeA"){
+        $requetedelete2 = $bdd->prepare("DELETE FROM EquipeA WHERE Nom = ?");
+        $requetedelete2->execute(array(htmlspecialchars($_POST['group'])));
+
+        
+    }
+}
+
     // header("Location: listsemisudo.php");
 ?>
 
@@ -44,10 +60,18 @@ if(!($_POST['group'] == "")){
         </div>
         <div class="contain">
             <form action="listsemisudo.php" method="POST">
-                <label for="group">
+            
+                <label for="group"> 
                         Nom du groupe : <br /><input type="text" name="group" id="group" required /><br />
                 </label>
 
+                <label for="equipe">
+                        Equipes: <br /><select name="equipe" id="equipe">
+                            <option>Equipe Z</option>
+                            <option>Equipe A</option>
+                        </select><br />
+                </label>
+                
                 <label for="submit">
                     <input type="submit" value="Confirmer">
                 </label>

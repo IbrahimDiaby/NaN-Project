@@ -56,9 +56,10 @@
                 <label for="matieres">
                     Matières: <br /><input type="text" name="matieres" id="matieres" required /><br />
                 </label>
+                
                 <label for="mark">
                     Notes:  <br />
-                        <select id="mark" name="mark" >
+                        <select id="mark" name="mark" required>
                             <option value="0">0</option>
                             <option value="100">100</option>
                         </select>
@@ -67,7 +68,7 @@
 
                 <label for="commentaire">
                     Appréciation: <br />
-                        <textarea name="commentaire" id="commentaire" placeholder="Commentaire"></textarea>
+                        <textarea name="commentaire" id="commentaire" placeholder="Commentaire" required></textarea>
                         <br />
                 </label>
                 <label for="submit">

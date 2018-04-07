@@ -70,7 +70,7 @@ $equipe= htmlspecialchars($_POST['equipe']);
                 </label>
 
                 <label for="old">
-                    Age: <br /><select name="old" id="old">
+                    Age: <br /><select name="old" id="old" required>
                         <option>18</option>
                         <option>19</option>
                         <option>20</option>
@@ -91,7 +91,7 @@ $equipe= htmlspecialchars($_POST['equipe']);
                 </label>
 
                 <label for="activity">
-                    Activité: <br /><select name="activity" id="activity">
+                    Activité: <br /><select name="activity" id="activity" required>
                             <option value="Etudiants">Etudiants</option>
                             <option value="Travailleurs">Travailleurs</option>
                             <option value="other">Autres</option>
@@ -99,14 +99,14 @@ $equipe= htmlspecialchars($_POST['equipe']);
                 </label>
 
                 <label for="equipe">
-                    Equipes: <br /><select name="equipe" id="equipe">
+                    Equipes: <br /><select name="equipe" id="equipe" required>
                             <option value="EquipeZ">Equipe Z</option>
                             <option value="EquipeA">Equipe A</option>
                             </select><br />
                 </label>
 
                 <label for="group">
-                    Groupe: <br /><select name="group" id="group">
+                    Groupe: <br /><select name="group" id="group" required>
                     <option value="CodeRoom">CodeRoom</option>
                     <option value="Genesis">Genesis</option>
                     <option>Groupe C</option>

@@ -58,7 +58,7 @@
                 </label>
                 <label for="mark">
                     Notes:  <br />
-                        <select id="mark" name="mark" >
+                        <select id="mark" name="mark" required>
                             <option value="0">0</option>
                             <option value="100">100</option>
                         </select>

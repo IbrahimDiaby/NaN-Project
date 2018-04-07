@@ -67,7 +67,7 @@ if(!($_POST['name'] == "")){
                         </label>
                         
                         <label for="activity">
-                            Activité: <br /><select name="activity" id="activity">
+                            Activité: <br /><select name="activity" id="activity" required>
                                 <option value="Etudiants">Etudiants</option>
                                 <option value="Travailleurs">Travailleurs</option>
                                 <option value="other">Autres</option>

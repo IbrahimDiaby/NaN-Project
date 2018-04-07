@@ -18,7 +18,7 @@
 <body>
     <header>
         <nav>
-            <nav class="logo"><img src="../../Images/NaN.png" alt="logo" class="Logo" title="Not A Number CI" /></nav>
+            <nav class="logo"><a href="../../NaN/loginsuccess.php"><img src="../../Images/NaN.png" alt="logo" class="Logo" title="Not A Number CI" /></a></nav>
             <nav class="textoflogo"><p>NaN Gestion</p></nav>
             <nav class="Admin"><p>Plateforme Admin <img src="../../Images/form.png" alt="" class="form" title="NaN Gestion" /></p></nav>
             <nav class="search-bar"><input type="text" alt="search-tool" class="search-tool" title="Recherche" placeholder="Rechercher"/></nav>

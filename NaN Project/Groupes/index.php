@@ -57,7 +57,7 @@
                 </label>
 
                 <label for="equipe">
-                        Equipes: <br /><select name="equipe" id="equipe">
+                        Equipes: <br /><select name="equipe" id="equipe" required>
                             <option>Equipe Z</option>
                             <option>Equipe A</option>
                         </select><br />

@@ -25,7 +25,7 @@
 <body>
     <header>
         <div id="logo">
-            <h1><img src="../Images/NaN.png" alt="" title="" class="table-logo"/>NaN - Matières</h1>
+            <h1><img src="../Images/NaN.png" alt="" title="" class="table-logo"/>NaN</h1>
         </div>
         <nav>
             <ul>
@@ -52,7 +52,7 @@
                     
                     <label for="bonusmalus">
                         Bonus/Malus: <br />
-                        <select name="bonusmalus" id="bonusmalus">
+                        <select name="bonusmalus" id="bonusmalus" required>
                             <option value="+1">+1</option>
                             <option value="-1">-1</option>
                         </select>
@@ -61,7 +61,7 @@
     
                     <label for="motifs">
                         Motifs: <br />
-                        <textarea name="motifs" id="motifs" placeholder="Commentaire"></textarea>
+                        <textarea name="motifs" id="motifs" placeholder="Commentaire" required></textarea>
                         <br />
                     </label>
     

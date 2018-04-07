@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost
--- Généré le :  ven. 06 avr. 2018 à 22:54
+-- Généré le :  sam. 07 avr. 2018 à 04:28
 -- Version du serveur :  5.6.38
 -- Version de PHP :  7.2.1
 
@@ -112,7 +112,8 @@ CREATE TABLE `EtudiantsNotes` (
   `Nom` varchar(255) NOT NULL,
   `Prenom` varchar(255) NOT NULL,
   `Matieres` varchar(255) NOT NULL,
-  `Notes` int(11) NOT NULL
+  `Notes` int(11) NOT NULL,
+  `Commentaires` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -466,7 +467,7 @@ ALTER TABLE `Etudiants`
 -- AUTO_INCREMENT pour la table `EtudiantsNotes`
 --
 ALTER TABLE `EtudiantsNotes`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT pour la table `Ex-Etudiants`
@@ -478,7 +479,7 @@ ALTER TABLE `Ex-Etudiants`
 -- AUTO_INCREMENT pour la table `Groupes`
 --
 ALTER TABLE `Groupes`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT pour la table `GroupesNotes`

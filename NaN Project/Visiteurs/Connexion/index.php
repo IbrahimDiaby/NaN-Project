@@ -61,12 +61,12 @@
                     </div>
                     <form action="" method="POST">
                         <label for="mail">
-                            <input type="email" name="mail" id="mail" placeholder="Email"/>
+                            <input type="email" name="mail" id="mail" placeholder="Email" required />
                             <br />
                         </label>
                                                         
                         <label for="password">
-                            <input type="password" name="password" id="password" placeholder="Mot De Passe">
+                            <input type="password" name="password" id="password" placeholder="Mot De Passe" required />
                                 <br />
                             </label>
                                                 

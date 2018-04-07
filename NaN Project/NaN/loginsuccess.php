@@ -34,7 +34,7 @@
         <nav>
             <ul>
                 <li class="connect">
-                    Vous etes connecté en tant que : 
+                    Bienvenue Admin: 
                 </li>
                 
                 <li><a href="#">#<?php echo $_SESSION['username'] ?><img src="../Images/form.png" alt="" class="imgSudo_Su" title="Administrateur" /></a>
@@ -79,6 +79,7 @@
                     <ul>
                         <li><a href="../Groupes/index.php">Créez</a></li>
                         <li><a href="../Groupes/edit.php">Basculer Un Groupe Dans Une Autre Equipe</a></li>
+                        <li><a href="../AfficheGroupes/index.php">Liste des groupes</a></li>
                         <li><a href="../Groupes/delete.php">Supprimer</a></li>
                     </ul>
                 </li>
